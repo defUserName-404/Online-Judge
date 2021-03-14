@@ -13,7 +13,6 @@ This repo contains all my solutions from various online judges.
 Author: Moshiur Rahman Nafi
 Handle: defUserName-404
 
-## Any code here in this repository is free to use and
-## doesn't need any permission from the author.
+## Any code here in this repository is free to use and doesn't need any permission from the author.
 
 ## However, copy pasting any solution is not advised in order to avoid plagarism. 
