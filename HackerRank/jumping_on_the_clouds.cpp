@@ -14,8 +14,7 @@ void print(T... args) {
 
 class Solution_To_Problem {
     // variables
-    int l, r;
-    int max_current;
+    int n, counter;
 
    public:
     void solution_function() {
@@ -23,18 +22,20 @@ class Solution_To_Problem {
         print("\nOUTPUT:\n");
 #endif
 
-        scan(l, r);
+        scan(n);
+        vector<int> arr(n);
 
-        max_current = INT_MIN;
+        for (auto &it : arr)
+            scan(it);
 
-        for (int i = l; i <= r; i++) {
-            for (int j = i; j <= r; j++) {
-                if ((i ^ j) > max_current)
-                    max_current = i ^ j;
-            }
+        counter = -1;
+
+        for (int i = 0; i < n; i++, counter++) {
+            if ((i < n - 2) && !(arr[i + 2]))
+                i++;
         }
 
-        print(max_current, '\n');
+        print(counter, '\n');
     }
 } Solution;
 
