@@ -34,10 +34,6 @@ class Solution_To_Problem {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
-
-        scan(n, m);
-
-        for (int i = 0; i)
     }
 } Solution;
 
