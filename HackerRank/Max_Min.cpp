@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#define LOCAL_DEBUG_IN
+#define LOCAL_DEBUG_OUT
 
 using namespace std;
 
@@ -33,7 +35,7 @@ class Solution_To_Problem {
 
         min_unfairness = INT32_MAX;
 
-        for (int i = 0; i <= n - k; i++) {
+        for (int i = 0; i < n - k; i++) {
             current_unfairness = arr[i + k - 1] - arr[i];
 
             if (current_unfairness < min_unfairness)
