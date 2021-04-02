@@ -1,6 +1,4 @@
 #include <bits/stdc++.h>
-#define LOCAL_DEBUG_IN
-#define LOCAL_DEBUG_OUT
 
 using namespace std;
 
