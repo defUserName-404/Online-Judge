@@ -3,7 +3,7 @@
 using namespace std;
 
 template <typename... T>
-void scan(T &...args) {
+void scan(T&... args) {
     ((cin >> args), ...);
 }
 
@@ -14,7 +14,8 @@ void print(T... args) {
 
 class Solution_To_Problem {
     // variables
-    int n;
+    int n, k, x;
+    int test_case;
 
    public:
     void solution_function() {
@@ -22,22 +23,21 @@ class Solution_To_Problem {
         print("\nOUTPUT:\n");
 #endif
 
-        scan(n);
+        scan(test_case);
 
-        vector<int> arr(n), sorted;
+        for (int i = 1; i <= test_case; i++) {
+            scan(n, k);
 
-        for (auto &it : arr) {
-            scan(it);
-            sorted.push_back(it);
+            int count = 0;
+
+            while (n--) {
+                scan(x);
+
+                count += (x % k);
+            }
+
+            print("Case ", i, ": ", count, '\n');
         }
-
-        sort(sorted.begin(), sorted.end());
-
-        int count = 0;
-
-        while (smale)
-
-        print(count, ' ', sorted[n / 2], '\n');
     }
 } Solution;
 

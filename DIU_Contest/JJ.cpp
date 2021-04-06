@@ -13,8 +13,6 @@ void print(T... args) {
 }
 
 class Solution_To_Problem {
-    // variables
-    int n;
 
    public:
     void solution_function() {
@@ -22,22 +20,7 @@ class Solution_To_Problem {
         print("\nOUTPUT:\n");
 #endif
 
-        scan(n);
-
-        vector<int> arr(n), sorted;
-
-        for (auto &it : arr) {
-            scan(it);
-            sorted.push_back(it);
-        }
-
-        sort(sorted.begin(), sorted.end());
-
-        int count = 0;
-
-        while (smale)
-
-        print(count, ' ', sorted[n / 2], '\n');
+        print("Never Give Up!\n");
     }
 } Solution;
 
