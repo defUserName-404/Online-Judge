@@ -2,10 +2,6 @@
 
 using namespace std;
 
-typedef long long ll;
-typedef unsigned long long ull;
-typedef long double ld;
-
 template <typename... T>
 void scan(T &...args) {
     ((cin >> args), ...);
@@ -18,22 +14,41 @@ void print(T... args) {
 
 class Solution_To_Problem {
     // variables
-    int a, b, c, d, m, n, p, q, s, t, x, y, z;
-    int test_case, count, count1, count2, sum, sum1, sum2, temp;
-    ll r, l, k;
-    double e, f, g, h;
-    char ch, ch1, ch2;
-    bool flag, check;
-    string str, s1, s2;
-    // constants
-    const ld Pi = acos(-1);
-    const int Mod = 10'000'007;
+    int n, m;
+    int max, count;
 
    public:
     void solution_function() {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
+
+        scan(n, m);
+        vector<string> v(n);
+
+        for (auto &str : v)
+            scan(str);
+
+        max = count = 0;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int current = 0;
+                for (int k = 0; k < m; k++) {
+                    if (v[j][k] == '1' || v[i][k] == '1')
+                        current++;
+                }
+
+                if (max < current) {
+                    max = current;
+                    count = 1;
+                } else if (max == current){
+                    count++;
+                }
+            }
+        }
+
+        print(max, '\n', count, '\n');
     }
 } Solution;
 
