@@ -23,7 +23,20 @@
         "cmath": "cpp",
         "utility": "cpp",
         "xstring": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "hash_map": "cpp",
+        "bit": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "condition_variable": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "mutex": "cpp",
+        "ranges": "cpp",
+        "shared_mutex": "cpp",
+        "streambuf": "cpp",
+        "thread": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,
