@@ -15,7 +15,13 @@ void print(T... args) {
 class Solution_To_Problem {
     // variables
     int n, test_case, count;
-    string str, s1, s2;
+    string str;
+
+    int absolute(pair<const char, int> element) {
+        int val = element.second;
+
+        return ((val < 0) ? -val : val);
+    }
 
    public:
     void solution_function() {
@@ -36,22 +42,18 @@ class Solution_To_Problem {
                 continue;
             }
 
-            s1 = s2 = "";
-
-            for (int i = 0; i < (n / 2); i++)
-                s1 += str[i];
-
-            for (int j = (n / 2); j < n; j++)
-                s2 += str[j];
-
-            sort(s1.begin(), s1.end());
-            sort(s2.begin(), s2.end());
+            map<char, int> letterCount;
 
             for (int i = 0; i < n / 2; i++)
-                if (s1[i] != s2[i])
-                    count++;
+                letterCount[str[i]]++;
 
-            print(count, '\n');
+            for (int i = n / 2; i < n; i++)
+                letterCount[str[i]]--;
+
+            for (auto it : letterCount)
+                count += absolute(it);
+
+            print(count / 2, '\n');
         }
     }
 } Solution;
