@@ -15,7 +15,6 @@ void print(T... args) {
 class Solution_To_Problem {
     // variables
     int n;
-    string str;
 
    public:
     void solution_function() {
@@ -25,26 +24,32 @@ class Solution_To_Problem {
 
         scan(n);
 
-        int t = n;
+        vector<string> arr(n);
 
-        vector<set<char>> collection;
+        for (string &it : arr)
+            scan(it);
 
-        int i = 0;
+        set<char> ans;
 
-        while (n--) {
-            scan(str);
-            
-            for (char ch : str) {
-                collection.at(i).insert(ch);
-                i++;
+        bool flag = true;
+
+        for (char ch : arr[0]) {
+            for (string str : arr) {
+                if (str.find(ch) == -1)
+                    flag = false;
             }
+            if(flag)
+                ans.insert(ch);
         }
 
-        for (int j = 0; j < t; j++) {
-            for (char ch : collection.at(j)) {
+        print(ans.size(), '\n');
 
-            }
-        }
+        // string str = "Hello World";
+        // size_t found1 = str.find("ello");
+        // size_t found2 = str.find('o');
+        // size_t found3 = str.find('a');
+
+        // print(found1, ' ', found2, ' ', found3, '\n');
     }
 } Solution;
 
