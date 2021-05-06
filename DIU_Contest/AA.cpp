@@ -16,6 +16,23 @@ class Solution_To_Problem {
     // variables
     int n;
 
+    vector<int> __delete(vector<int> arr, int key) {
+        int n = arr.size();
+        bool flag = false;
+
+        vector<int> after_delete;
+
+        for (auto it : arr) {
+            if (it == key && !flag) {
+                flag = true;
+                continue;
+            }
+            after_delete.push_back(it);
+        }
+
+        return after_delete;
+    }
+
    public:
     void solution_function() {
 #ifdef LOCAL_DEBUG_OUT
@@ -34,8 +51,19 @@ class Solution_To_Problem {
         sort(sorted.begin(), sorted.end());
 
         int count = 0;
+        int j = 0;
 
-        while (smale)
+        while (j < n - 1) {
+            for (int i = 0; i < arr.size(); i++) {
+                if (arr[i] == sorted[j]) {
+                    count += i;
+                    arr = __delete(arr, sorted[j]);
+
+                    j++;
+                    continue;
+                }
+            }
+        }
 
         print(count, ' ', sorted[n / 2], '\n');
     }
