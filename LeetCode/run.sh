@@ -1,7 +1,6 @@
 #!/bin/bash
-## Version 2.4
 
-read fileName
+fileName=$1
 
 # Color Codes
 RED='\033[1;31m'

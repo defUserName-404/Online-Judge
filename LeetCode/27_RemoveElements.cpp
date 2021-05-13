@@ -16,9 +16,9 @@ class Solution {
 int main() {
     std::vector<int> nums = {2, 3, 4, 3, 5, 2};
 
-    Solution *s = new Solution();
+    Solution s;
 
-    int size = s->removeElement(nums, 3);
+    int size = s.removeElement(nums, 3);
 
     std::cout << "New size = " << nums.size() << std::endl;
     std::cout << size << std::endl;
