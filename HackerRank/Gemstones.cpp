@@ -1,23 +1,29 @@
 #include <bits/stdc++.h>
+#define LOCAL_DEBUG_IN
+#define LOCAL_DEBUG_OUT
 
 using namespace std;
 
 template <typename... T>
-void scan(T&... args) {
+void scan(T &...args)
+{
     ((cin >> args), ...);
 }
 
 template <typename... T>
-void print(T... args) {
+void print(T... args)
+{
     ((cout << args), ...);
 }
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int n;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
@@ -26,34 +32,34 @@ class Solution_To_Problem {
 
         vector<string> arr(n);
 
-        for (string &it : arr)
-            scan(it);
+        for (string &s : arr)
+            scan(s);
 
-        set<char> ans;
+        unordered_set<char> ans;
 
         bool flag = true;
 
-        for (char ch : arr[0]) {
-            for (string str : arr) {
-                if (str.find(ch) == -1)
+        for (int i = 0; i < arr[0].size(); i++)
+        {
+            for (string str : arr)
+            {
+                if (str.find(arr[0][i]) == string::npos)
+                {
                     flag = false;
+                    break;
+                }
             }
-            if(flag)
-                ans.insert(ch);
+
+            if (flag)
+                ans.insert(arr[0][i]);
         }
 
         print(ans.size(), '\n');
-
-        // string str = "Hello World";
-        // size_t found1 = str.find("ello");
-        // size_t found2 = str.find('o');
-        // size_t found3 = str.find('a');
-
-        // print(found1, ' ', found2, ' ', found3, '\n');
     }
 } Solution;
 
-int main() {
+int main()
+{
 #ifdef LOCAL_DEBUG_IN
     print("INPUT:\n");
 #endif
