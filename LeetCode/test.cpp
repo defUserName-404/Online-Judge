@@ -1,22 +1,20 @@
-#include "118_PascalTriangle.hpp"
+#include "20_ValidParentheses.hpp"
 
 #include <iostream>
 
 int main()
 {
-    std::vector<std::vector<int>> ans;
+    std::string s1, s2, s3;
+
+    s1 = "()[]{}";
+    s2 = "([)]";
+    s3 = "{[]}";
 
     Solution s;
 
-    int n = 5;
+    // std::cout << s.isValid(s1) << std::endl;
+    std::cout << s.isValid(s2) << std::endl;
+    std::cout << s.isValid(s3) << std::endl;
 
-    ans = s.generate(n);
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j <= i; j++)
-            std::cout << ans[i][j] << ' ';
-
-        std::cout << '\n';
-    }
+    return 0;
 }
