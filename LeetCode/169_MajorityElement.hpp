@@ -1,7 +1,9 @@
+#include <algorithm>
 #include <unordered_map>
 #include <vector>
 
-class Solution
+// Solution 1: run - time(24 ms)
+class Solution1
 {
   public:
     int majorityElement(std::vector<int> &nums)
@@ -16,11 +18,13 @@ class Solution
         int element;
 
         for (auto it : count)
+        {
             if (it.second >= (double)n / 2)
             {
                 element = it.first;
                 break;
             }
+        }
 
         return element;
     }
