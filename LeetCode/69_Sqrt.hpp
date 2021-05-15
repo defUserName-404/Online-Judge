@@ -1,8 +1,10 @@
 #include <cmath>
 
-class Solution {
-   public:
-    int mySqrt(int x) {
+class Solution
+{
+  public:
+    int mySqrt(int x)
+    {
         return sqrt(x);
     }
 };
