@@ -1,20 +1,18 @@
-#include "20_ValidParentheses.hpp"
+#include "189_RotateArray.hpp"
 
 #include <iostream>
 
 int main()
 {
-    std::string s1, s2, s3;
-
-    s1 = "()[]{}";
-    s2 = "([)]";
-    s3 = "{[]}";
+    std::vector<int> nums = {1, 2, 3, 4, 5, 6, 7};
+    int k = 3;
 
     Solution s;
 
-    // std::cout << s.isValid(s1) << std::endl;
-    std::cout << s.isValid(s2) << std::endl;
-    std::cout << s.isValid(s3) << std::endl;
+    s.rotate(nums, k);
+
+    for (auto it : nums)
+        std::cout << it << ' ';
 
     return 0;
 }
