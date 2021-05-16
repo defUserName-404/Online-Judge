@@ -1,18 +1,15 @@
-#include "189_RotateArray.hpp"
-
 #include <iostream>
+#include <unordered_set>
 
 int main()
 {
-    std::vector<int> nums = {1, 2, 3, 4, 5, 6, 7};
-    int k = 3;
+    std::unordered_multiset<int> mySet{2, 1, 3, 4, 5, 6, 7, 1};
 
-    Solution s;
+    for (auto it : mySet)
+        std::cout << it << " : " << mySet.count(it) << std::endl;
 
-    s.rotate(nums, k);
-
-    for (auto it : nums)
-        std::cout << it << ' ';
+    // for (auto it : nums)
+    //     std::cout << it << ' ';
 
     return 0;
 }
