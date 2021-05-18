@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "32.C": "cpp",
-        "random": "cpp",
-        "xiosbase": "cpp",
-        "iostream": "cpp",
-        "vector": "cpp"
-    }
-}
