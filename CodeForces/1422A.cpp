@@ -7,7 +7,7 @@ typedef long long ll;
 void solve()
 {
     int t;
-    cin  >> t;
+    cin >> t;
     ll a, b, c, d;
 
     while (t--)

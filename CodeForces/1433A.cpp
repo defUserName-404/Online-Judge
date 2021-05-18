@@ -25,7 +25,7 @@ void solve()
         int len = n.length();
 
         digSum = dig * 10 + len * (len + 1) / 2;
-       
+
         cout << digSum << "\n";
     }
 }

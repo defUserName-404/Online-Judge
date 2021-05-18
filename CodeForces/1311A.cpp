@@ -38,6 +38,6 @@ int main()
 
     while (t--)
         cout << solve() << '\n';
-    
+
     return 0;
 }

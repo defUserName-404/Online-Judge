@@ -2,12 +2,14 @@
 
 using namespace std;
 
-void solution() {
+void solution()
+{
     uint64_t a = UINT64_MAX;
     cout << a << endl;
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

@@ -2,19 +2,21 @@
 
 using namespace std;
 
-long long sum_of_series(long long x) {
-	long long sum;
+long long sum_of_series(long long x)
+{
+    long long sum;
 
-	(x % 2 == 0) ? sum = x / 2 : sum = -(x + 1) / 2;
+    (x % 2 == 0) ? sum = x / 2 : sum = -(x + 1) / 2;
 
-	return sum;
+    return sum;
 }
 
-int main() {
-	long long n;
-	cin >> n;
-	
-	cout << sum_of_series(n) << endl;
+int main()
+{
+    long long n;
+    cin >> n;
 
-	return 0;
+    cout << sum_of_series(n) << endl;
+
+    return 0;
 }

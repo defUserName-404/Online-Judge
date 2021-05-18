@@ -2,15 +2,16 @@
 
 using namespace std;
 
-int main() {
-	int m, n;
-	int domino;
-	cin >> m >> n;
+int main()
+{
+    int m, n;
+    int domino;
+    cin >> m >> n;
 
-	//domino size 2x1
-	domino = (m * n) / 2;
+    //domino size 2x1
+    domino = (m * n) / 2;
 
-	cout << domino << endl;
+    cout << domino << endl;
 
-	return 0;
+    return 0;
 }

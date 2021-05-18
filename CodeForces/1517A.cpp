@@ -5,41 +5,48 @@ using namespace std;
 typedef long long ll;
 
 template <typename... T>
-void scan(T &...args) {
+void scan(T &...args)
+{
     ((cin >> args), ...);
 }
 
 template <typename... T>
-void print(T... args) {
+void print(T... args)
+{
     ((cout << args), ...);
 }
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int test_case;
     ll n, count;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
 
         scan(test_case);
 
-        while (test_case--) {
+        while (test_case--)
+        {
             scan(n);
 
             count = 0;
 
-            if (n % 2050) {
+            if (n % 2050)
+            {
                 print(count - 1, '\n');
                 continue;
             }
 
             ll div = n / 2050;
 
-            while (div > 0) {
+            while (div > 0)
+            {
                 count += (div % 10);
                 div /= 10;
             }
@@ -49,7 +56,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
 #ifdef LOCAL_DEBUG_IN
     print("INPUT:\n");
 #endif

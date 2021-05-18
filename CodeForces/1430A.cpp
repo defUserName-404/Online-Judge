@@ -2,14 +2,16 @@
 
 using namespace std;
 
-void solution() {
+void solution()
+{
     int n;
     cin >> n;
 
     if (n == 1 || n == 2 || n == 4)
         cout << "-1";
 
-    else {
+    else
+    {
         if (n % 3 == 0)
             cout << n / 3 << ' ' << "0" << ' ' << "0";
         else if (n % 3 == 1)
@@ -20,7 +22,8 @@ void solution() {
     cout << '\n';
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

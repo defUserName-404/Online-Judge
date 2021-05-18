@@ -5,7 +5,8 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
-void solution() {
+void solution()
+{
     int a, b, c;
     cin >> a >> b >> c;
 
@@ -16,7 +17,8 @@ void solution() {
         cout << "NO\n";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

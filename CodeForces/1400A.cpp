@@ -5,7 +5,8 @@ using namespace std;
 char bin[120];
 int t, n;
 
-void solution() {
+void solution()
+{
     scanf("%d %s", &n, bin);
 
     for (int i = 0; i < strlen(bin); i += 2)
@@ -14,7 +15,8 @@ void solution() {
     printf("\n");
 }
 
-int main() {
+int main()
+{
     scanf("%d", &t);
 
     while (t--)

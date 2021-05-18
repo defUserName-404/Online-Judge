@@ -53,10 +53,10 @@ class SolutionToProblem
             for (int i = 0; i < n - 1; i++)
             {
                 if (finished.count(str[i]))
-                    {
-                        flag = false;
-                        break;
-                    }
+                {
+                    flag = false;
+                    break;
+                }
 
                 if (str[i] != str[i + 1])
                     finished.insert(str[i]);

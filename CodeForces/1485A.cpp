@@ -3,41 +3,48 @@
 using namespace std;
 
 template <typename... T>
-void scan(T &...args) {
+void scan(T &...args)
+{
     ((cin >> args), ...);
 }
 
 template <typename... T>
-void print(T... args) {
+void print(T... args)
+{
     ((cout << args), ...);
 }
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int test_case, a, b;
     int count, temp;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
 
         scan(test_case);
 
-        while (test_case--) {
+        while (test_case--)
+        {
             scan(a, b);
 
             count = 0;
 
-            while (a > 0) {
+            while (a > 0)
+            {
                 a /= b;
             }
         }
     }
 } Solution;
 
-int main() {
+int main()
+{
 #ifdef LOCAL_DEBUG_IN
     print("INPUT:\n");
 #endif

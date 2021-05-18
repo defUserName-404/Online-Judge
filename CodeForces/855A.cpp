@@ -2,13 +2,15 @@
 
 using namespace std;
 
-void solve() {
+void solve()
+{
     int n;
     cin >> n;
     map<string, int> count;
     string str;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> str;
 
         if (count[str])
@@ -20,7 +22,8 @@ void solve() {
     }
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

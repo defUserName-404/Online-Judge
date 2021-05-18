@@ -4,7 +4,8 @@ using namespace std;
 
 int e[5];
 
-void solution() {
+void solution()
+{
     for (int i = 0; i < 4; i++)
         cin >> e[i];
 
@@ -16,7 +17,8 @@ void solution() {
     cout << '\n';
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

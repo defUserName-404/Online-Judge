@@ -3,30 +3,35 @@
 using namespace std;
 
 template <typename... T>
-void scan(T&... args) {
+void scan(T &...args)
+{
     ((cin >> args), ...);
 }
 
 template <typename... T>
-void print(T... args) {
+void print(T... args)
+{
     ((cout << args), ...);
 }
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int n, total_zero, total_one;
     string str;
     map<char, int> count;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
 
         scan(n, str);
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             count[str[i]]++;
         }
 
@@ -42,7 +47,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
 #ifdef LOCAL_DEBUG_IN
     print("INPUT:\n");
 #endif

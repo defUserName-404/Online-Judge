@@ -6,11 +6,13 @@ typedef long long ll;
 
 ll t, p, q, x;
 
-void solution() {
+void solution()
+{
     cin >> p >> q;
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

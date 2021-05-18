@@ -7,27 +7,32 @@ typedef unsigned long long ull;
 typedef long double ld;
 
 template <typename... T>
-void scan(T&... args) {
+void scan(T &...args)
+{
     ((cin >> args), ...);
 }
 
 template <typename... T>
-void print(T... args) {
+void print(T... args)
+{
     ((cout << args), ...);
 }
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int n;
     string str;
     unordered_set<string> count;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
         scan(n);
         cin.ignore();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             getline(cin, str);
 
             count.insert(str);
@@ -37,7 +42,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

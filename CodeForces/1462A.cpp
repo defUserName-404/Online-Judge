@@ -5,7 +5,8 @@ using namespace std;
 int t, n;
 int arr[305];
 
-void solution() {
+void solution()
+{
     cin >> n;
 
     for (int i = 0; i < n; i++)
@@ -14,11 +15,15 @@ void solution() {
     int temp[305];
     int l = 0, r = n - 1;
 
-    for (int i = 0; i < n; i++) {
-        if (i % 2 == 0) {
+    for (int i = 0; i < n; i++)
+    {
+        if (i % 2 == 0)
+        {
             temp[i] = arr[l];
             l++;
-        } else {
+        }
+        else
+        {
             temp[i] = arr[r];
             r--;
         }
@@ -29,7 +34,8 @@ void solution() {
     cout << '\n';
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

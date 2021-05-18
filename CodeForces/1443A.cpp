@@ -4,14 +4,17 @@ using namespace std;
 
 int t, n;
 
-void solution() {
+void solution()
+{
     cin >> t;
 
-    while (t--) {
+    while (t--)
+    {
         cin >> n;
         int ans = 4 * n;
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++)
+        {
             cout << ans;
             ans -= 2;
 
@@ -20,7 +23,8 @@ void solution() {
     }
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

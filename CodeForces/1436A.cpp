@@ -7,12 +7,14 @@ using namespace std;
 
 typedef long long ll;
 
-void solution() {
+void solution()
+{
     int n, m;
     cin >> n >> m;
     int sum = 0;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int x;
         cin >> x;
 
@@ -22,7 +24,8 @@ void solution() {
     cout << ((sum == m) ? "YES\n" : "NO\n");
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

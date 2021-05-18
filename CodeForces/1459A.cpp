@@ -2,10 +2,12 @@
 
 using namespace std;
 
-string solution(int &n, string &r, string &b) {
+string solution(int &n, string &r, string &b)
+{
     int r_count = 0, b_count = 0;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         if (r[i] > b[i])
             ++r_count;
         else if (r[i] < b[i])
@@ -20,7 +22,8 @@ string solution(int &n, string &r, string &b) {
         return "EQUAL";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -28,7 +31,8 @@ int main() {
 
     cin >> testCase;
 
-    while (testCase--) {
+    while (testCase--)
+    {
         int n;
         string r, b;
         cin >> n >> r >> b;

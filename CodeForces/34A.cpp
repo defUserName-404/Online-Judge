@@ -14,7 +14,8 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef long double ld;
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int a, b, c, d, m, n, p, q, s, t, x, y, z;
     int testCase, count, count1, count2, sum, sum1, sum2, temp;
@@ -29,28 +30,33 @@ class Solution_To_Problem {
     // const ld Pi = acos(-1);
     // const int Mod = 10'000'007;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
         scan1(n);
 
         // temp2 = 0;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             scan1(x);
             vec.push_back(x);
         }
         count = INT_MAX;
 
-        for (int i = 0; i < vec.size() - 1; i++) {
+        for (int i = 0; i < vec.size() - 1; i++)
+        {
             temp = abs(vec[i] - vec[i + 1]);
 
-            if (temp < count) {
+            if (temp < count)
+            {
                 count = temp;
                 indices = make_pair(i + 1, i + 2);
             }
         }
 
-        if (abs(vec[vec.size() - 1] - vec[0]) < count) {
+        if (abs(vec[vec.size() - 1] - vec[0]) < count)
+        {
             indices = make_pair(1, vec.size());
         }
 
@@ -59,7 +65,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

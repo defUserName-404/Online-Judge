@@ -3,29 +3,34 @@
 using namespace std;
 
 template <typename... T>
-void scan(T&... args) {
+void scan(T &...args)
+{
     ((cin >> args), ...);
 }
 
 template <typename... T>
-void print(T... args) {
+void print(T... args)
+{
     ((cout << args), ...);
 }
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int n, k;
     int test_case;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
 
         scan(test_case);
 
-        while (test_case--) {
+        while (test_case--)
+        {
             scan(n, k);
 
             vector<int> arr(n);
@@ -35,8 +40,10 @@ class Solution_To_Problem {
 
             int sum = 0;
 
-            for (int i = 0; i < n - 1; i++) {
-                while (arr[i] > 0) {
+            for (int i = 0; i < n - 1; i++)
+            {
+                while (arr[i] > 0)
+                {
                     arr[i]--;
                     k--;
                     sum++;
@@ -59,7 +66,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
 #ifdef LOCAL_DEBUG_IN
     print("INPUT:\n");
 #endif

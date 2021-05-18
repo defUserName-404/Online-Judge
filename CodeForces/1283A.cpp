@@ -5,13 +5,15 @@ using namespace std;
 int t;
 int h, m;
 
-void solution() {
+void solution()
+{
     cin >> h >> m;
 
     cout << ((23 - h) * 60) + (60 - m) << '\n';
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

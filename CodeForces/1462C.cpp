@@ -14,7 +14,8 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef long double ld;
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int a, b, c, d, m, n, p, q, s, t, x, y, z;
     int test_case, count, count1, count2, sum, sum1, sum2, temp;
@@ -27,10 +28,12 @@ class Solution_To_Problem {
     const ld Pi = acos(-1);
     const int Mod = 10'000'007;
 
-    void run_case() {
+    void run_case()
+    {
         scan1(n);
 
-        if (n > 45) {
+        if (n > 45)
+        {
             print1("-1\n");
             return;
         }
@@ -41,11 +44,15 @@ class Solution_To_Problem {
         sum = 0;
         int i = 0;
 
-        while (sum != n) {
-            if (sum + digits[i] > n) {
+        while (sum != n)
+        {
+            if (sum + digits[i] > n)
+            {
                 i++;
                 continue;
-            } else {
+            }
+            else
+            {
                 sum += digits[i];
                 ans.push_back(digits[i]);
                 i++;
@@ -60,8 +67,9 @@ class Solution_To_Problem {
         print1('\n');
     }
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
         scan1(test_case);
 
         while (test_case--)
@@ -69,7 +77,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

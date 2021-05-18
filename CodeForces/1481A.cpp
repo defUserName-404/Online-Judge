@@ -3,24 +3,28 @@
 using namespace std;
 
 template <typename... T>
-void scan(T &...args) {
+void scan(T &...args)
+{
     ((cin >> args), ...);
 }
 
 template <typename... T>
-void print(T... args) {
+void print(T... args)
+{
     ((cout << args), ...);
 }
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int test_case, x, y;
     int L, R, U, D;
     string str;
     bool check_x, check_y;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
@@ -28,14 +32,16 @@ class Solution_To_Problem {
         scan(test_case);
         cin.ignore();
 
-        while (test_case--) {
+        while (test_case--)
+        {
             scan(x, y, str);
 
             L = R = U = D = 0;
 
             check_x = check_y = false;
 
-            for (auto ch : str) {
+            for (auto ch : str)
+            {
                 if (ch == 'L')
                     L++;
                 else if (ch == 'R')
@@ -64,7 +70,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
 #ifdef LOCAL_DEBUG_IN
     print("INPUT:\n");
 #endif

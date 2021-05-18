@@ -8,15 +8,18 @@ using namespace std;
 typedef int64_t ll;
 typedef uint64_t ull;
 
-void solution() {
+void solution()
+{
     int n;
     cin >> n;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cout << "Hello World\n";
     }
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

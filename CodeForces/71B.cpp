@@ -7,16 +7,19 @@ typedef unsigned long long ull;
 typedef long double ld;
 
 template <typename... T>
-void scan(T&... args) {
+void scan(T &...args)
+{
     ((cin >> args), ...);
 }
 
 template <typename... T>
-void print(T... args) {
+void print(T... args)
+{
     ((cout << args), ...);
 }
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int a, b, c, d, m, n, p, q, s, t, x, y, z;
     int testCase, count, count1, count2, sum, sum1, sum2, temp;
@@ -28,12 +31,14 @@ class Solution_To_Problem {
     // constants
     const int Mod = 1000003;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
     }
 } Solution;
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

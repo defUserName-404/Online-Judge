@@ -7,7 +7,8 @@ typedef long long ll;
 int t, n;
 int arr[60];
 
-void solution() {
+void solution()
+{
     cin >> n;
 
     for (int i = 0; i < n; i++)
@@ -15,8 +16,10 @@ void solution() {
 
     sort(arr, arr + n);
 
-    for (int i = 0; i < n - 1; i++) {
-        if (arr[i + 1] - arr[i] > 1) {
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (arr[i + 1] - arr[i] > 1)
+        {
             cout << "NO\n";
             return;
         }
@@ -24,7 +27,8 @@ void solution() {
     cout << "YES\n";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

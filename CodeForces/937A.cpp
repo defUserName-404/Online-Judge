@@ -2,11 +2,13 @@
 
 using namespace std;
 
-void solve() {
+void solve()
+{
     int n;
     cin >> n;
     set<int> s;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int x;
         cin >> x;
         if (x != 0)
@@ -18,7 +20,8 @@ void solve() {
     cout << count << '\n';
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

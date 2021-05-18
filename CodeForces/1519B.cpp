@@ -3,29 +3,34 @@
 using namespace std;
 
 template <typename... T>
-void scan(T&... args) {
+void scan(T &...args)
+{
     ((cin >> args), ...);
 }
 
 template <typename... T>
-void print(T... args) {
+void print(T... args)
+{
     ((cout << args), ...);
 }
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int test_case;
     int m, n, k;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
 
         scan(test_case);
 
-        while (test_case--) {
+        while (test_case--)
+        {
             scan(m, n, k);
 
             int cost = (m * n) - 1;
@@ -35,7 +40,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
 #ifdef LOCAL_DEBUG_IN
     print("INPUT:\n");
 #endif

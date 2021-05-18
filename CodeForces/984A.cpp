@@ -2,7 +2,8 @@
 
 using namespace std;
 
-void solve() {
+void solve()
+{
     int n;
     int arr[1010];
     cin >> n;
@@ -11,12 +12,14 @@ void solve() {
 
     sort(arr, arr + n);
 
-    if (n % 2 == 0) {
+    if (n % 2 == 0)
+    {
         int mid = (n - 1) / 2;
         cout << min(arr[mid], arr[mid + 1]);
     }
 
-    else {
+    else
+    {
         int mid = (n - 1) / 2;
         cout << arr[mid];
     }
@@ -24,7 +27,8 @@ void solve() {
     cout << '\n';
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

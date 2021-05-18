@@ -14,7 +14,8 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef long double ld;
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int a, b, c, d, m, n, p, q, s, t, x, y, z;
     int testCase, count, count1, count2, sum, sum1, sum2, temp;
@@ -27,16 +28,19 @@ class Solution_To_Problem {
     const ld Pi = acos(-1);
     const int Mod = 10'000'007;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
         scan1(testCase);
 
-        while (testCase--) {
+        while (testCase--)
+        {
             scan1(n);
 
             set<int> mySet;
 
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++)
+            {
                 scan1(x);
 
                 mySet.count(x) ? mySet.insert(x + 1) : mySet.insert(x);
@@ -47,7 +51,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

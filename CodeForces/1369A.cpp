@@ -4,13 +4,15 @@ using namespace std;
 
 int t, n;
 
-void solution() {
+void solution()
+{
     cin >> n;
 
     cout << ((n % 4 == 0) ? "YES\n" : "NO\n");
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

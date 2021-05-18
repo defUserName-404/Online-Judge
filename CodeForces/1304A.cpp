@@ -4,17 +4,19 @@ using namespace std;
 
 int t, x, y, a, b;
 
-void solution() {
+void solution()
+{
     cin >> x >> y >> a >> b;
 
     if ((y - x) % (a + b) == 0)
         cout << (y - x) / (a + b) << '\n';
-    
+
     else
         cout << "-1\n";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

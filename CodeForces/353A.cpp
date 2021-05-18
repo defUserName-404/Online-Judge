@@ -2,12 +2,14 @@
 
 using namespace std;
 
-void solution() {
+void solution()
+{
     int sum_u = 0, sum_b = 0, count = 0;
     int n;
     cin >> n;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int upper, bottom;
         cin >> upper >> bottom;
 
@@ -26,7 +28,8 @@ void solution() {
         cout << "-1\n";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
