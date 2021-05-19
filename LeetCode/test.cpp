@@ -1,12 +1,14 @@
-#include "387_FirstUniqueCharacterInString.hpp"
+#include <iostream>
+#include <algorithm>
+#include <vector>
 
 int main()
 {
-    Solution s;
+    std::vector<std::string> h = {"1", "11", "10", "2", "20"};
+    std::sort(h.begin(), h.end());
 
-    std::string name = "test";
-
-    std::cout << s.firstUniqChar(name);
-
+    for (auto it : h)
+        std::cout << it << std::endl;
+        
     return 0;
 }
