@@ -1,14 +1,12 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
+#include "67_AddBinary.hpp"
 
 int main()
 {
-    std::vector<std::string> h = {"1", "11", "10", "2", "20"};
-    std::sort(h.begin(), h.end());
+    std::string a = "1000000", b = "1002";
 
-    for (auto it : h)
-        std::cout << it << std::endl;
-        
+    Solution s;
+
+    std:: cout << s.addBinary(a, b);
+
     return 0;
 }
