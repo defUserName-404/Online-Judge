@@ -1,12 +1,10 @@
-// #include "67_AddBinary.hpp"
+#include <iostream>
 
-// int main()
-// {
-//     std::string a = "1000000", b = "1002";
+int main()
+{
+    std::cout << isalpha('a') << std::endl;
+    std::cout << isalpha('A') << std::endl;
+    std::cout << isalpha(1) << std::endl;
 
-//     Solution s;
-
-//     std:: cout << s.addBinary(a, b);
-
-//     return 0;
-// }
+    return 0;
+}
