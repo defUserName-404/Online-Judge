@@ -2,6 +2,9 @@
 #include <iostream>
 #include <vector>
 
+// 100ms run time(faster than 16%)
+// need to optimize the solution
+
 class Solution
 {
   public:

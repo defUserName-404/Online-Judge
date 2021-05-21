@@ -1,12 +1,12 @@
-#include "67_AddBinary.hpp"
+// #include "67_AddBinary.hpp"
 
-int main()
-{
-    std::string a = "1000000", b = "1002";
+// int main()
+// {
+//     std::string a = "1000000", b = "1002";
 
-    Solution s;
+//     Solution s;
 
-    std:: cout << s.addBinary(a, b);
+//     std:: cout << s.addBinary(a, b);
 
-    return 0;
-}
+//     return 0;
+// }
