@@ -12,7 +12,7 @@ class Solution
         }
 
         if (temp >= 10)
-             return addDigits(temp);
+            return addDigits(temp);
 
         return temp;
     }

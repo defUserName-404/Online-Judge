@@ -6,7 +6,7 @@ class Solution
     void rotate(std::vector<int> &nums, int k)
     {
         int n = nums.size();
-        
+
         std::vector<int> finalPosition(n);
 
         k %= n;

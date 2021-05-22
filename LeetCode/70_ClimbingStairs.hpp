@@ -1,8 +1,10 @@
 #include <vector>
 
-class Solution {
-   public:
-    int climbStairs(int n) {
+class Solution
+{
+  public:
+    int climbStairs(int n)
+    {
         std::vector<int> dp(n + 1, 0);
 
         dp[0] = 1;

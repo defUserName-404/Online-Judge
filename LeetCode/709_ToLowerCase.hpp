@@ -6,7 +6,7 @@ class Solution
     std::string toLowerCase(std::string s);
 };
 
-std::string Solution :: toLowerCase(std::string s)
+std::string Solution ::toLowerCase(std::string s)
 {
     int n = s.size();
 
