@@ -1,10 +1,11 @@
-#include <iostream>
+#include "58_LengthOfLastWord.hpp"
 
 int main()
 {
-    std::cout << isalpha('a') << std::endl;
-    std::cout << isalpha('A') << std::endl;
-    std::cout << isalpha(1) << std::endl;
+    Solution s;
+
+    std::string str = "HelloWorld  ";
+    std::cout << s.lengthOfLastWord(str) << std::endl;
 
     return 0;
 }
