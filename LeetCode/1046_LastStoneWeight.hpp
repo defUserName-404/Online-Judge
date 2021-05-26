@@ -1,5 +1,5 @@
-#include <vector>
 #include <queue>
+#include <vector>
 
 class Solution
 {
@@ -22,7 +22,8 @@ int Solution::lastStoneWeight(std::vector<int> &stones)
         int y = pq.top();
         pq.pop();
 
-        pq.push(x - y);
+        if (x - y)
+            pq.push(x - y);
     }
 
     if (pq.empty())

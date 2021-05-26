@@ -1,11 +1,24 @@
-#include "58_LengthOfLastWord.hpp"
+#include <iostream>
+#include <queue>
 
 int main()
 {
-    Solution s;
+    std::priority_queue<int> arr;
 
-    std::string str = "HelloWorld  ";
-    std::cout << s.lengthOfLastWord(str) << std::endl;
+    int x;
+
+    for (int i = 0; i < 10; i++)
+    {
+        std::cin >> x;
+
+        arr.push(x);
+    }
+
+    while (!arr.empty())
+    {
+        std::cout << arr.top() << std::endl;
+        arr.pop();
+    }
 
     return 0;
 }
