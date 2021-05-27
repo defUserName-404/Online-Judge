@@ -10,7 +10,7 @@ int Solution::balancedStringSplit(std::string s)
 {
     int current = 0, count = 0;
 
-    for (char ch : s)
+    for (const char &ch : s)
     {
         (ch == 'L') ? current-- : current++;
 
