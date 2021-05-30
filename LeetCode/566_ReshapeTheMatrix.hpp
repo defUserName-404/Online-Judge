@@ -24,7 +24,7 @@ std::vector<std::vector<int>> Solution::matrixReshape(std::vector<std::vector<in
         {
             reshaped_matrix[k][l] = mat[i][j];
 
-            if (++l ==c)
+            if (++l == c)
             {
                 k++;
                 l = 0;

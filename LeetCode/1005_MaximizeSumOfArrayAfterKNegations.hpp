@@ -17,11 +17,8 @@ int Solution::largestSumAfterKNegations(std::vector<int> &nums, int k)
 
     for (int &x : nums)
     {
-        if (k != 0)
-        {
-            x = -x;
-            k--;
-        }
+        if (x < 0)
+            
     }
 
     return sum;
