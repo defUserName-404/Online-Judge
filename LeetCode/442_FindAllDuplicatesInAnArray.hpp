@@ -1,5 +1,5 @@
 #include <vector>
-#include <set>
+#include <unordered_set>
 
 class Solution
 {
@@ -9,7 +9,7 @@ class Solution
 
 std::vector<int> Solution::findDuplicates(std::vector<int> &nums)
 {
-    std::set<int> Count;
+    std::unordered_set<int> Count;
     std::vector<int> result;
 
     for (int &x : nums)
