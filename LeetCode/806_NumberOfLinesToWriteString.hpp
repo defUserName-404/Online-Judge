@@ -22,6 +22,6 @@ std::vector<int> Solution::numberOfLines(std::vector<int> &widths, std::string s
         else
             lines++, currentWidth = value;
     }
-
+    
     return {lines, currentWidth};
 }
