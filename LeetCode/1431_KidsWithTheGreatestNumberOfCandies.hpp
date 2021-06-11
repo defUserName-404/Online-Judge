@@ -8,8 +8,7 @@ class Solution
 
 std::vector<bool> Solution::kidsWithCandies(std::vector<int> &candies, int extraCandies)
 {
-    auto currentMaxIter = std::max_element(candies.begin(), candies.end());
-    int currentMaxElement = *currentMaxIter;
+    int currentMaxElement = *(std::max_element(candies.begin(), candies.end()));
 
     std::vector<bool> result;
 
