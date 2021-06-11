@@ -13,7 +13,7 @@ std::vector<bool> Solution::kidsWithCandies(std::vector<int> &candies, int extra
     std::vector<bool> result;
 
     for (int &x : candies)
-        result.push_back((x + extraCandies >= currentMaxElement) ? true : false);
+        result.push_back(x + extraCandies >= currentMaxElement);
 
     return result;
 }
