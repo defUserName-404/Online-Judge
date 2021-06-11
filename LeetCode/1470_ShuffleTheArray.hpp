@@ -10,10 +10,10 @@ std::vector<int> Solution::shuffle(std::vector<int> &nums, int n)
 {
     std::vector<int> reshuffledArray;
 
-    for (int i = 0, j = n; i < n; i++, j++)
+    for (int i = 0; i < n; i++)
     {
         reshuffledArray.push_back(nums[i]);
-        reshuffledArray.push_back(nums[j]);
+        reshuffledArray.push_back(nums[i + n]);
     }
 
     return reshuffledArray;
