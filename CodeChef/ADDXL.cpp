@@ -2,18 +2,21 @@
 
 using namespace std;
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     string a, b, sum;
     int carry, current;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
 #ifdef LOCAL_DEBUG_OUT
         print("\nOUTPUT:\n");
 #endif
 
-        while (cin >> a >> b) {
+        while (cin >> a >> b)
+        {
             if (a.length() > b.length())
                 swap(a, b);
 
@@ -22,14 +25,16 @@ class Solution_To_Problem {
 
             carry = 0;
 
-            for (int i = n1 - 1; i >= 0; i--) {
+            for (int i = n1 - 1; i >= 0; i--)
+            {
                 current = ((a[i] - '0') + (b[i + diff] - '0') + carry);
 
                 sum.push_back(current % 10 + '0');
                 carry = current / 10;
             }
 
-            for (int i = n2 - n1 - 1; i >= 0; i--) {
+            for (int i = n2 - n1 - 1; i >= 0; i--)
+            {
                 current = (b[i] - '0') + carry;
                 sum.push_back(current % 10 + '0');
                 carry = current / 10;
@@ -47,7 +52,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
 #ifdef LOCAL_DEBUG_IN
     print("INPUT:\n");
 #endif

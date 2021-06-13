@@ -12,16 +12,19 @@ using namespace std;
 int g, n, i, q;
 int testCase;
 
-void solve() {
+void solve()
+{
     cin >> g;
 
-    while (g--) {
+    while (g--)
+    {
         cin >> i >> n >> q;
 
         if (n % 2 == 0)
             cout << n / 2 << "\n";
 
-        else {
+        else
+        {
             if (i == q)
                 cout << n / 2 << "\n";
             else
@@ -30,7 +33,8 @@ void solve() {
     }
 }
 
-int main() {
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(0);
 
