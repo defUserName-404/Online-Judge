@@ -46,8 +46,6 @@ class Solution_To_Problem
             reverse(sum.begin(), sum.end());
 
             cout << sum << '\n';
-
-            sum.erase()
         }
     }
 } Solution;
