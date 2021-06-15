@@ -14,7 +14,8 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef long double ld;
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int a, b, c, d, m, n, p, q, s, t, x, y, z;
     int testCase, count, count1, count2, sum, sum1, sum2, temp;
@@ -27,11 +28,13 @@ class Solution_To_Problem {
     const ld Pi = acos(-1);
     const int Mod = 1000000007;
 
-   public:
-    ll factorial(int n) {
+  public:
+    ll factorial(int n)
+    {
         ll fact = 1;
 
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i <= n; i++)
+        {
             fact = (fact * i) % Mod;
             fact %= Mod;
         }
@@ -39,7 +42,8 @@ class Solution_To_Problem {
         return fact;
     }
 
-    void solution_function() {
+    void solution_function()
+    {
         scan1(n);
 
         ll fact = factorial(n);
@@ -54,7 +58,8 @@ class Solution_To_Problem {
     }
 } Solution;
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
