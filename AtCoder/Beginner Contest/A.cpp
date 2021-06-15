@@ -14,7 +14,8 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef long double ld;
 
-class Solution_To_Problem {
+class Solution_To_Problem
+{
     // variables
     int a, b, c, d, m, n, p, q, s, t, x, y, z;
     int testCase, count, count1, count2, sum, sum1, sum2, temp;
@@ -27,15 +28,17 @@ class Solution_To_Problem {
     const ld Pi = acos(-1);
     const int Mod = 10000007;
 
-   public:
-    void solution_function() {
+  public:
+    void solution_function()
+    {
         scan4(a, b, c, d);
 
         print2(max((a * b), (c * d)), '\n');
     }
 } Solution;
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
