@@ -1,24 +1,12 @@
+#include "204_CountPrimes.hpp"
+
 #include <iostream>
-#include <queue>
 
 int main()
 {
-    std::priority_queue<int> arr;
+    Solution s;
 
-    int x;
-
-    for (int i = 0; i < 10; i++)
-    {
-        std::cin >> x;
-
-        arr.push(x);
-    }
-
-    while (!arr.empty())
-    {
-        std::cout << arr.top() << std::endl;
-        arr.pop();
-    }
+    std::cout << s.countPrimes(5000000) << std::endl;
 
     return 0;
 }
