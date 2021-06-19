@@ -17,8 +17,19 @@ void print(T... args)
 class Solution
 {
     // variables
-    int n, l, r, x;
-    int sum;
+    int n;
+
+    bool isPrime(const int &n)
+    {
+        if (n == 1)
+            return false;
+
+        for (int i = 2; i < n; i++)
+            if (n % i == 0)
+                return false;
+
+        return true;
+    }
 
   public:
     Solution()
@@ -36,19 +47,14 @@ class Solution
         print("\033[32m");
 #endif
 
-        scan(n, l, r);
+        scan(n);
 
-        sum = 0;
+        if (isPrime(n))
+            print("NO PUNISHMENT\n");
 
-        vector<int> arr(n);
-
-        for (auto &x : arr)
-            scan(x);
-
-        for (int i = l; i <= r; i++)
-            sum += arr[i];
-
-        print(sum, '\n');
+        else
+            for (int i = 0; i < n; i++)
+                print("I DID NOT DO THE ASSIGNMENT.\n");
     }
 };
 
