@@ -51,11 +51,7 @@ class Solution
 
             int diff = str[i] - parentheses.top();
 
-            if (diff == 1 || diff == 2)
-                parentheses.pop();
-
-            else
-                parentheses.push(str[i]);
+            (diff == 1 || diff == 2) ? parentheses.pop() : parentheses.push(str[i]);
         }
 
         print(parentheses.empty() ? "Yes\n" : "No\n");
