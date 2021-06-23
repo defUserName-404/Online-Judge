@@ -4,13 +4,15 @@ using namespace std;
 
 typedef long long ll;
 
-void solution() {
+void solution()
+{
     ll N;
     cin >> N;
 
     ll rev = 0, temp;
 
-    while (N != 0) {
+    while (N != 0)
+    {
         temp = N % 10;
         rev = rev * 10 + temp;
         N /= 10;
@@ -19,7 +21,8 @@ void solution() {
     cout << rev << "\n";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

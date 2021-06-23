@@ -2,7 +2,8 @@
 
 using namespace std;
 
-void solution() {
+void solution()
+{
     string str, target;
     cin >> str >> target;
 
@@ -10,18 +11,26 @@ void solution() {
     int t = target.length();
     int count = 0;
 
-    if (l < t) {
+    if (l < t)
+    {
         cout << "0\n";
-    } else if (l == t) {
+    }
+    else if (l == t)
+    {
         cout << ((str == target) ? "1\n" : "0\n");
-    } else {
-        for (int i = 0; i <= l - t; i++) {
+    }
+    else
+    {
+        for (int i = 0; i <= l - t; i++)
+        {
             int j;
-            for (j = 0; j < t; j++) {
+            for (j = 0; j < t; j++)
+            {
                 if (str[i + j] != target[j])
                     break;
             }
-            if (j == t) {
+            if (j == t)
+            {
                 count++;
                 j = 0;
             }
@@ -30,7 +39,8 @@ void solution() {
     }
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

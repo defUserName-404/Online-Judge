@@ -2,14 +2,16 @@
 
 using namespace std;
 
-void solution() {
+void solution()
+{
     string str, sub;
     cin >> str >> sub;
 
     cout << str.find(sub) << "\n";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

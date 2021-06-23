@@ -2,7 +2,8 @@
 
 using namespace std;
 
-long long factorial(int n) {
+long long factorial(int n)
+{
     long long fact = 1;
 
     for (int i = 1; i <= n; i++)
@@ -11,11 +12,13 @@ long long factorial(int n) {
     return fact;
 }
 
-int main() {
+int main()
+{
     int testCase;
     cin >> testCase;
 
-    for (int i = 1; i <= testCase; i++) {
+    for (int i = 1; i <= testCase; i++)
+    {
         int n;
         cin >> n;
         double sum_of_series = 0;

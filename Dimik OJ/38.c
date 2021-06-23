@@ -1,17 +1,22 @@
 #include <stdio.h>
 
-void diamond(int m, int n) {
+void diamond(int m, int n)
+{
     int i, j;
 
-    for (i = 1; i <= m; i++) {
-        for (j = 1; j <= i; j++) {
+    for (i = 1; i <= m; i++)
+    {
+        for (j = 1; j <= i; j++)
+        {
             (i == j) ? printf("%d", n) : printf("%d ", n);
         }
         printf("\n");
     }
 
-    for (i = m - 1; i >= 1; i--) {
-        for (j = 1; j <= i; j++) {
+    for (i = m - 1; i >= 1; i--)
+    {
+        for (j = 1; j <= i; j++)
+        {
             (i == j) ? printf("%d", n) : printf("%d ", n);
         }
         printf("\n");
@@ -19,11 +24,13 @@ void diamond(int m, int n) {
     printf("\n");
 }
 
-int main() {
+int main()
+{
     int loop, testCase;
     scanf("%d", &testCase);
 
-    for (loop = 1; loop <= testCase; loop++) {
+    for (loop = 1; loop <= testCase; loop++)
+    {
         int a, b;
         scanf("%d %d", &a, &b);
 
