@@ -2,14 +2,16 @@
 
 using namespace std;
 
-void solution() {
+void solution()
+{
     int n;
     cin >> n;
     vector<int> arr;
 
     int sum = 0, count = 0;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int x;
         cin >> x;
         arr.push_back(x);
@@ -18,7 +20,8 @@ void solution() {
 
     double avg = (double)sum / n;
 
-    for (auto i : arr) {
+    for (auto i : arr)
+    {
         if (i > avg)
             count++;
     }
@@ -27,7 +30,8 @@ void solution() {
          << "\n";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
