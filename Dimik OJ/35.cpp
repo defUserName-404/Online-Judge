@@ -4,7 +4,8 @@ using namespace std;
 
 int t;
 
-void solution() {
+void solution()
+{
     double cx, cy, r, x, y;
 
     cin >> cx >> cy >> r >> x >> y;
@@ -14,7 +15,8 @@ void solution() {
     cout << ((d > r) ? "The point is not inside the circle\n" : "The point is inside the circle\n");
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

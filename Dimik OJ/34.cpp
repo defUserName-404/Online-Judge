@@ -12,7 +12,8 @@ ll Euclid_LCM(ll a, ll b) {
     return (a / Euclid_GCD(a, b)) * b;
 }
 */
-void solution(ll &a, ll &b, ll &c) {
+void solution(ll &a, ll &b, ll &c)
+{
     //ll lcm = Euclid_LCM(a, b);
     cout << a + b + c << endl;
     /*
@@ -23,7 +24,8 @@ void solution(ll &a, ll &b, ll &c) {
     */
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -31,7 +33,8 @@ int main() {
 
     cin >> testCase;
 
-    while (testCase--) {
+    while (testCase--)
+    {
         ll a, b, c;
         cin >> a >> b >> c;
 
