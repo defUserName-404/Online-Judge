@@ -4,7 +4,8 @@ using namespace std;
 
 int t;
 
-void solution() {
+void solution()
+{
     string str;
     getline(cin, str);
 
@@ -17,7 +18,8 @@ void solution() {
     cout << count << '\n';
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
