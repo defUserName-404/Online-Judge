@@ -1,15 +1,20 @@
 #include <math.h>
 #include <stdio.h>
 
-void primeCount(int x, int y) {
+void primeCount(int x, int y)
+{
     int i, j, count = 0;
-    for (i = x; i <= y; i++) {
+    for (i = x; i <= y; i++)
+    {
         int factCount = 0;
         if (i == 2)
             count++;
-        else if (i > 2) {
-            for (j = 2; j <= sqrt(i); j++) {
-                if (i % j == 0) {
+        else if (i > 2)
+        {
+            for (j = 2; j <= sqrt(i); j++)
+            {
+                if (i % j == 0)
+                {
                     factCount = 1;
                     break;
                 }
@@ -21,11 +26,13 @@ void primeCount(int x, int y) {
     printf("%d\n", count);
 }
 
-int main() {
+int main()
+{
     int testCase;
     scanf("%d", &testCase);
 
-    while (testCase--) {
+    while (testCase--)
+    {
         int a, b;
 
         scanf("%d %d", &a, &b);

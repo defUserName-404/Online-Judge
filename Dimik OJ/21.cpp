@@ -2,11 +2,13 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     int testCase;
     cin >> testCase;
 
-    for (int loop = 1; loop <= testCase; loop++) {
+    for (int loop = 1; loop <= testCase; loop++)
+    {
         char str[1001];
         getchar();
         scanf("%[^\n]", str);

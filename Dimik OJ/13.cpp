@@ -1,53 +1,58 @@
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
 
-using namespace std;
+// using namespace std;
 
-int factorial(int n) {
-    int fact = 1;
+// int factorial(int n)
+// {
+//     int fact = 1;
 
-    for (int i = 1; i <= n; i++)
-        fact *= i;
+//     for (int i = 1; i <= n; i++)
+//         fact *= i;
 
-    return fact;
-}
+//     return fact;
+// }
 
-void solution() {
-    string str;
-    getline(cin, str);
+// void solution()
+// {
+//     string str;
+//     getline(cin, str);
 
-    int count = 1;
+//     int count = 1;
 
-    unordered_map<string, int> dup;
+//     unordered_map<string, int> dup;
 
-    stringstream wordStream(str);
+//     stringstream wordStream(str);
 
-    string word;
-    while (wordStream >> word) {
-        //create a pair of map and bool
-        pair<map<string, int>::iterator, bool> retrunValue;
+//     string word;
+//     while (wordStream >> word)
+//     {
+//         //create a pair of map and bool
+//         pair<map<string, int>::iterator, bool> retrunValue;
 
-        //insert element
-        retrunValue = dup.insert(pair<string, int>(word, count));
+//         //insert element
+//         // retrunValue = dup.insert(pair<string, int>(word, count));
 
-        //Check if map contains value
-        if (retrunValue.second == false) {
-            //Element already exists
-            ++retrunValue.first->second;
-        }
-    }
-}
+//         //Check if map contains value
+//         if (retrunValue.second == false)
+//         {
+//             //Element already exists
+//             ++retrunValue.first->second;
+//         }
+//     }
+// }
 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+// int main()
+// {
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(NULL);
 
-    int testCase;
+//     int testCase;
 
-    cin >> testCase;
-    cin.ignore();
+//     cin >> testCase;
+//     cin.ignore();
 
-    while (testCase--)
-        solution();
+//     while (testCase--)
+//         solution();
 
-    return 0;
-}
+//     return 0;
+// }

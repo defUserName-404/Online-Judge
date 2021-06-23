@@ -2,13 +2,15 @@
 
 using namespace std;
 
-void solution() {
+void solution()
+{
     string str;
     getline(cin, str);
 
     int count = 1;
 
-    for (int i = 0; i < str.length(); i++) {
+    for (int i = 0; i < str.length(); i++)
+    {
         if (str[i] == ' ' && str[i - 1] != ' ')
             count++;
     }
@@ -16,7 +18,8 @@ void solution() {
     cout << "Count = " << count << "\n";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
