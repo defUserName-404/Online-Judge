@@ -2,36 +2,53 @@
 
 using namespace std;
 
-#define scan1(x) cin >> x
-#define print1(x) cout << x
-#define scan2(x, y) cin >> x >> y
-#define print2(x, y) cout << x << y
-#define scan3(x, y, z) cin >> x >> y >> z
-#define print3(x, y, z) cout << x << y << z
-#define printd(x, y, z) cout << fixed << setprecision(y) << x << z
-
 typedef long long ll;
 typedef unsigned long long ull;
 typedef long double ld;
 
-class Solution_To_Problem
+template <typename... T>
+void scan(T &...args)
+{
+    ((cin >> args), ...);
+}
+
+template <typename... T>
+void print(T... args)
+{
+    ((cout << args), ...);
+}
+
+class Solution
 {
     // variables
     int a, b, c, d, m, n, p, q, s, t, x, y, z;
-    int testCase, count, count1, count2, sum, sum1, sum2, temp;
+    int test_case, count, count1, count2, sum, sum1, sum2, temp;
     ll r, l, k;
     double e, f, g, h;
     char ch, ch1, ch2;
-    bool con, con1, con2, check;
+    bool flag, check;
     string str, s1, s2;
     // constants
     const ld Pi = acos(-1);
-    const int Mod = 10000007;
+    const int Mod = 10'000'007;
 
   public:
-    void solution_function()
+    Solution()
     {
-        scan2(n, str);
+#ifdef LOCAL_DEBUG_IN
+        print("\033[1;31mINPUT:\n");
+        print("\033[34m");
+#endif
+    }
+
+    void test()
+    {
+#ifdef LOCAL_DEBUG_OUT
+        print("\n\033[1;31mOUTPUT:\n");
+        print("\033[32m");
+#endif
+
+        scan(n, str);
 
         count = sum = 0;
 
@@ -46,16 +63,18 @@ class Solution_To_Problem
                 count = sum;
         }
 
-        print2(count, '\n');
+        print(count, '\n');
     }
-} Solution;
+};
 
 int main()
 {
+    Solution solution;
+
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    Solution.solution_function();
+    solution.test();
 
     return 0;
 }
