@@ -21,16 +21,7 @@ void print(T... args)
 class Solution
 {
     // variables
-    int a, b, c, d, m, n, p, q, s, t, x, y, z;
-    int test_case, count, count1, count2, sum, sum1, sum2, temp;
-    ll r, l, k;
-    double e, f, g, h;
-    char ch, ch1, ch2;
-    bool flag, check;
-    string str, s1, s2;
-    // constants
-    const ld Pi = acos(-1);
-    const int Mod = 10'000'007;
+    int n;
 
   public:
     Solution()
@@ -48,7 +39,32 @@ class Solution
         print("\033[32m");
 #endif
 
-        
+        scan(n);
+
+        vector<int> x(n), y(n);
+
+        for (int &x : x)
+            scan(x);
+
+        for (int &y : y)
+            scan(y);
+
+        ll Max = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (i == j)
+                    continue;
+
+                ll current = (x[j] - x[i]) * (x[j] - x[i]) + (y[j] - y[i]) * (y[j] - y[i]);
+
+                Max = max(Max, current);
+            }
+        }
+
+        print(Max, '\n');
     }
 };
 
