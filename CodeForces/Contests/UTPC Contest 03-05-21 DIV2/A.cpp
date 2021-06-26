@@ -2,6 +2,8 @@
 
 using namespace std;
 
+typedef long long ll;
+
 template <typename... T>
 void scan(T &...args)
 {
@@ -38,7 +40,7 @@ class Solution
 
         scan(n);
 
-        int low = INT_MAX, high = INT_MIN;
+        ll low = INT64_MAX, high = INT64_MIN;
         string f, nf;
 
         while (n--)
@@ -51,7 +53,7 @@ class Solution
                 nf = str;
             }
 
-            else if (x > high)
+            if (x > high)
             {
                 high = x;
                 f = str;
