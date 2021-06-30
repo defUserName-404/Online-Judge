@@ -18,7 +18,7 @@ class Solution
 {
     // variables
     int n;
-    string s1, s2;
+    string s;
 
   public:
     Solution()
@@ -38,40 +38,45 @@ class Solution
 
         scan(n);
 
-        for (int i = 0; i <= n; i++)
+        for (int i = 1; i <= n; i++)
         {
-            getline(cin, s1);
-            getline(cin, s2);
+            getline(cin, s);
+            cin.ignore();
 
             string item1 = "", item2 = "";
 
-            for (int i = s1.size() - 1; i >= 0; i--)
+            if (i % 2 == 0)
             {
-                if (s1[i] == ' ')
-                    break;
+                for (int i = s.size() - 1; i >= 0; i--)
+                {
+                    if (s[i] == ' ')
+                        break;
 
-                item1.push_back(s1[i]);
+                    item1.push_back(s[i]);
+                }
+
+                reverse(item1.begin(), item1.end());
             }
 
-            reverse(item1.begin(), item1.end());
-
-            for (int i = s2.size() - 1; i >= 0; i--)
+            else
             {
-                if (s2[i] == ' ')
-                    break;
+                for (int i = s.size() - 1; i >= 0; i--)
+                {
+                    if (s[i] == ' ')
+                        break;
 
-                item2.push_back(s2[i]);
+                    item2.push_back(s[i]);
+                }
+
+                reverse(item2.begin(), item2.end());
             }
-
-            reverse(item2.begin(), item2.end());
 
             string item = item2 + "-" + item1;
 
             print("Uh! ", item, '!', '\n');
+        }
     }
-}
-}
-;
+};
 
 int main()
 {
