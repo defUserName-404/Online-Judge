@@ -9,9 +9,7 @@ class Solution
         int global_max = nums[0];
         int current_max = nums[0];
 
-        int n = nums.size();
-
-        for (int i = 1; i < n; i++)
+        for (int i = 1; i < nums.size(); i++)
         {
             current_max = std::max(nums[i], current_max + nums[i]);
             global_max = std::max(current_max, global_max);
