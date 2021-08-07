@@ -19,15 +19,16 @@ int Solution::longestPalindrome(std::string &s)
 
     for (auto it : charCount)
     {
-        const size_t value = it.second;
+        size_t value = it.second;
 
         if (value >= 2)
         {
             if (value % 2)
-                oddChar |= true;
+                oddChar |= true, value--;
 
-            count += (value / 2);
+            count += value;
         }
+
         else
             oddChar |= true;
     }
