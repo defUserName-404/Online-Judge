@@ -1,13 +1,12 @@
+#include <algorithm>
 #include <iostream>
 #include <map>
-#include <cmath>
-#include <algorithm>
 
-// ! Problem is partially solved
 class Solution
 {
-    std::map < int, char, std::greater<int> > RomanNumerals =
-          {{1000, 'M'}, {500, 'D'}, {100, 'C'}, {50, 'L'}, {10, 'X'}, {5, 'V'}, {1, 'I'}};
+    std::map<int, std::string, std::greater<int>> RomanNumerals =
+        {{1000, "M"}, {900, "CM"}, {500, "D"}, {400, "CD"}, {100, "C"}, {90, "XC"}, {50, "L"}, {40, "XL"}, {10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}};
+
     std::string ans;
 
   public:
@@ -18,7 +17,7 @@ std::string Solution::intToRoman(int num)
 {
     for (const auto &it : RomanNumerals)
     {
-        int x = floor(num / it.first);
+        int x = num / it.first;
         num -= (x * it.first);
 
         for (int i = 0; i < x; i++)
