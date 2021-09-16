@@ -1,5 +1,4 @@
 #include <vector>
-#include <set>
 
 class Solution
 {
@@ -7,12 +6,40 @@ class Solution
     std::vector<int> sortedSquares(std::vector<int> &nums);
 };
 
+//* Brute Force Trivial solution *//
+// std::vector<int> Solution::sortedSquares(std::vector<int> &nums)
+// {
+//     for (int &x : nums)
+//         x *= x;
+
+//     std::sort(nums.begin(), nums.end());
+
+//     return nums;
+// }
+
 std::vector<int> Solution::sortedSquares(std::vector<int> &nums)
 {
-    std::multiset<int> absSquareNums;
+    int left = 0, right = nums.size() - 1;
+    int index = right;
 
-	for (int &x : nums)
-        absSquareNums.insert(x * x);
+    std::vector<int> ans(index + 1);
 
-    return std::vector<int>(absSquareNums.begin(), absSquareNums.end());
+    while (left <= right)
+    {
+        if (abs(nums[left]) > abs(nums[right]))
+        {
+            ans[index] = nums[left] * nums[left];
+            left++;
+        }
+
+        else
+        {
+            ans[index] = nums[right] * nums[right];
+            right--;
+        }
+
+        index--;
+    }
+
+    return ans;
 }
