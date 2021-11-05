@@ -26,8 +26,6 @@ class Solution_To_Problem {
         scan(test_case);
         cin.ignore();
 
-        isal
-
         for (int tc = 0; tc < test_case; tc++) {
             scan(w, h);
 
