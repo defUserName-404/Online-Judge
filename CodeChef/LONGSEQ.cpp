@@ -1,6 +1,4 @@
 #include <bits/stdc++.h>
-#define LOCAL_DEBUG_IN
-#define LOCAL_DEBUG_OUT
 
 using namespace std;
 
@@ -53,15 +51,11 @@ class Solution
             while (n)
             {
                 int digit = n % 10;
-                if (digit == 0)
-                    count0++;
-                else
-                    count1++;
-
+                digit == 0 ? count0++ : count1++;
                 n /= 10;
             }
 
-            print((abs(count0 - count1) == 2 ? "Yes" : "No"), '\n');
+            print(((count0 == 1 || count1 == 1) ? "Yes" : "No"), '\n');
         }
     }
 };
