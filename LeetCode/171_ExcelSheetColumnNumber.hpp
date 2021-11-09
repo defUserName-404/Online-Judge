@@ -4,10 +4,10 @@
 class Solution
 {
   public:
-    int titleToNumber(std::string columnTitle);
+    int titleToNumber(const std::string &columnTitle);
 };
 
-int Solution::titleToNumber(std::string columnTitle)
+int Solution::titleToNumber(const std::string &columnTitle)
 {
     int x = 0;
     int n = columnTitle.size();
