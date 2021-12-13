@@ -1,33 +1,39 @@
 #include <iostream>
 #include <vector>
 
-//! WA
+class Solution
+{
+  public:
+    std::string longestCommonPrefix(std::vector<std::string> &strs);
+};
 
-// class Solution
-// {
-//   public:
-//     std::string longestCommonPrefix(std::vector<std::string> &strs);
-// };
+std::string Solution::longestCommonPrefix(std::vector<std::string> &strs)
+{
+    std::string longest;
+    bool isSame = true;
+    int totalStrings = strs.size();
 
-// std::string Solution::longestCommonPrefix(std::vector<std::string> &strs)
-// {
-//     std::string longest;
-//     bool isSame = true;
-//     int totalStrings = strs.size();
+    for (int j = 0;; j++)
+    {
+        for (int i = 0; i < totalStrings - 1; i++)
+        {
+            if (j == strs[i].size() || !isSame)
+                return longest;
 
-//     for (int j = 0;; j++)
-//     {
-//         for (int i = 0; i < totalStrings - 1; i++)
-//         {
-//             if (j == strs[i].size() || !isSame)
-//                 return longest;
+            isSame = (strs[i][j] == strs[i + 1][j]);
+        }
 
-//             isSame = (strs[i][j] == strs[i + 1][j]);
-//         }
+        if (totalStrings == 1)
+        {
+            if (strs[0].size() != 0)
+                longest += strs[0];
 
-//         if (isSame)
-//             longest += strs[0][j];
-//     }
+            break;
+        }
 
-//     return longest;
-// }
+        if (isSame)
+            longest += strs[0][j];
+    }
+
+    return longest;
+}
