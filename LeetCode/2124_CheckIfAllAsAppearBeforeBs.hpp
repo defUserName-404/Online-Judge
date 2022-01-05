@@ -1,5 +1,5 @@
-#include <string>
 #include <algorithm>
+#include <string>
 
 class Solution
 {
@@ -19,6 +19,10 @@ class Solution
 //     return s == sSorted;
 // }
 
+/*
+?   Solution 1: Accepted
+?   5ms(70% faster)    
+*/
 bool Solution::checkString(std::string &s)
 {
     bool bSeen = false;
