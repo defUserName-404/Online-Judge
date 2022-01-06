@@ -4,21 +4,19 @@
 class Solution
 {
   public:
-    bool asteroidsDestroyed(int mass, std::vector<int> &asteroids);
+    bool asteroidsDestroyed(long mass, std::vector<int> &asteroids);
 };
 
-bool Solution::asteroidsDestroyed(int mass, std::vector<int> &asteroids)
+bool Solution::asteroidsDestroyed(long mass, std::vector<int> &asteroids)
 {
     std::sort(asteroids.begin(), asteroids.end());
 
-    long long total = mass;
-
     for (int i = 0; i < asteroids.size(); i++)
     {
-        if (asteroids[i] > total)
+        if (asteroids[i] > mass)
             return false;
 
-        total += asteroids[i];
+        mass += asteroids[i];
     }
 
     return true;
