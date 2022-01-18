@@ -20,9 +20,7 @@ std::string Solution::reverseWords(std::string s)
         else
         {
             for (int j = r - 1; j >= l; j--)
-            {
                 reverse += s[j];
-            }
 
             l = i;
             reverse += ' ';
