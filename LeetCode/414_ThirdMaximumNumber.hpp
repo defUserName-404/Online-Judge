@@ -14,9 +14,8 @@ int Solution::thirdMax(std::vector<int> &nums)
 
     auto iter = uniqueNums.begin();
 
-    if (uniqueNums.size() > 2)
-        for (int i = 0; i < 3; i++)
-            iter++;
+    if (uniqueNums.size() >= 3)
+        std::advance(iter, 2);
 
     return *iter;
 }
