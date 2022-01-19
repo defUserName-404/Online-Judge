@@ -1,5 +1,3 @@
-import java.util.Currency;
-
 public class AddTwoNumbers_2 {
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode sum = new ListNode();
