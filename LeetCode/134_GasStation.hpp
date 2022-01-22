@@ -9,33 +9,21 @@ class Solution
 int Solution::canCompleteCircuit(std::vector<int> &gas, std::vector<int> &cost)
 {
     int n = gas.size();
-    int starting = -1;
-    int current = 0;
+    int startingPosition = 0, gasLeftOnTank = 0, minimumCost = 0;
 
     for (int i = 0; i < n; i++)
     {
-        int j = i;
-        current = 0;
+        gasLeftOnTank += gas[i] - cost[i];
 
-        do
-        {
-            if (current + gas[j] < cost[j])
-            {
-                starting = -1;
-                break;
-            }
-
-            current += gas[j] - cost[j];
-            starting = i;
-
-            j++;
-            if (j == n)
-                j = 0;
-        } while (j != i);
-
-        if (starting != -1)
-            break;
+        if (gasLeftOnTank < minimumCost)
+		{
+            startingPosition = i + 1;
+            minimumCost = gasLeftOnTank;
+        }
     }
 
-    return starting;
+    if (gasLeftOnTank < 0)
+        startingPosition = -1;
+
+    return startingPosition;
 }
