@@ -1,6 +1,6 @@
 public class RemoveNthNodeFromEndOfTheList_19 {
 	public ListNode removeNthFromEnd(ListNode head, int n) {
-		ListNode afterRemoval = new ListNode(-1);
+		ListNode afterRemoval = new ListNode();
 
 		while (head != null) {
 			if (n != 0)
@@ -9,6 +9,6 @@ public class RemoveNthNodeFromEndOfTheList_19 {
 			head = head.next;
 		}
 
-		return afterRemoval.next;
+		return afterRemoval;
 	}
 }
