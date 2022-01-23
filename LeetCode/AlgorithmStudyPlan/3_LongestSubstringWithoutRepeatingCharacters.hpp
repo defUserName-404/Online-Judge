@@ -1,3 +1,4 @@
+#include <cstring>
 #include <string>
 
 class Solution
@@ -9,7 +10,8 @@ class Solution
 int Solution::lengthOfLongestSubstring(std::string s)
 {
     int n = s.size();
-    int startingPointOfChars[256] = {[0 ... 255] = -1};
+    int startingPointOfChars[256];
+    memset(startingPointOfChars, -1, 256 * sizeof(startingPointOfChars[0]));
     int longest = 0, startingPosition = -1;
 
     for (int i = 0; i < n; i++)
