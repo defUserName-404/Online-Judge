@@ -15,7 +15,7 @@ int Solution::findLengthOfLCIS(std::vector<int> &nums)
     {
         if (i > 0 && nums[i - 1] >= nums[i])
             starting = i;
-		longest = std::max(longest, i - starting + 1);
+        longest = std::max(longest, i - starting + 1);
     }
 
     return longest;
