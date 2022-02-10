@@ -1,3 +1,4 @@
+#include <unordered_map>
 #include <vector>
 
 class Solution
@@ -6,24 +7,18 @@ class Solution
     int subarraySum(std::vector<int> &nums, int k);
 };
 
-// TODO: Optimize (TLE)
-// * Need to find a way to implement hashtable
 int Solution::subarraySum(std::vector<int> &nums, int k)
 {
-    int n = nums.size();
-    int count = 0;
+    int n = nums.size(), count = 0, currentPrefixSum = 0;
+    std::unordered_map<int, int> prefixSumArray;
+
+    prefixSumArray[currentPrefixSum]++;
 
     for (int i = 0; i < n; i++)
     {
-        int currentSum = 0;
-
-        for (int j = i; j < n; j++)
-        {
-            currentSum += nums[j];
-
-            if (currentSum == k)
-                count++;
-        }
+        currentPrefixSum += nums[i];
+        count += prefixSumArray[currentPrefixSum - k];
+        prefixSumArray[currentPrefixSum]++;
     }
 
     return count;
