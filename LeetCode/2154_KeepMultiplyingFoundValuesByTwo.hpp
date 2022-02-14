@@ -10,28 +10,15 @@ class Solution
 
 int Solution::findFinalValue(std::vector<int> &nums, int original)
 {
-    std::set<int> factorsFound;
-    factorsFound.insert(1);
+    std::set<int> array(nums.begin(), nums.end());
+    int n = array.size(), factor = 0, temp = original;
 
-    for (const auto x : nums)
-        if (x % original == 0)
-            factorsFound.insert(x / original);
-
-    int previous = 1;
-
-    for (const auto it : factorsFound)
+    for (int i = 0; i < n; i++)
     {
-        if (it == previous)
-            continue;
-
-        if (it / previous != 2)
-            break;
-
-        previous = it;
+        if (!array.count(original * pow(2, i)))
+            return original * pow(2, i);
+        temp *= 2;
     }
 
-    if (nums.size() == factorsFound.size())
-        return original * pow(2, previous);
-
-    return original * pow(2, previous - 1);
+    return temp;
 }
