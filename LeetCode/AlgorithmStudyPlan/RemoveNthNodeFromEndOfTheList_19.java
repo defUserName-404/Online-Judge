@@ -1,3 +1,5 @@
+package AlgorithmStudyPlan;
+
 public class RemoveNthNodeFromEndOfTheList_19 {
 	public ListNode removeNthFromEnd(ListNode head, int n) {
 		ListNode afterRemoval = new ListNode();
