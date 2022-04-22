@@ -1,4 +1,4 @@
-public class TruncateSentence_1816 {
+class Solution {
 	public String truncateSentence(String s, int k) {
 		StringBuilder ans = new StringBuilder("");
 		String[] words = s.split(" ");
