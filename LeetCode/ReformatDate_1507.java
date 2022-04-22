@@ -1,18 +1,21 @@
 public class ReformatDate_1507 {
+
+	public String reformatDate(String date) {
+		String[] dateInGivenFormat = date.split(" ");
+
+		String day = parseDay(dateInGivenFormat[0]);
+		String month = parseMonth(dateInGivenFormat[1]);
+		String year = dateInGivenFormat[2];
+
+		return new String(year + "-" + month + "-" + day);
+	}
+
 	private String parseDay(String day) {
-		char first = day.charAt(0);
 		char second = day.charAt(1);
 
-		StringBuilder _day = new StringBuilder();
-		if (second >= '0' && second <= '9') {
-			_day.append(first);
-			_day.append(second);
-		} else {
-			_day.append('0');
-			_day.append(first);
-		}
-
-		return String.valueOf(_day);
+		return (second >= '0' && second <= '9')
+				? day.substring(0, 2)
+				: "0" + day.substring(0, 1);
 	}
 
 	private String parseMonth(String month) {
@@ -31,15 +34,5 @@ public class ReformatDate_1507 {
 		}
 
 		return String.valueOf(monthNo);
-	}
-
-	public String reformatDate(String date) {
-		String[] dateInGivenFormat = date.split(" ");
-
-		String day = parseDay(dateInGivenFormat[0]);
-		String month = parseMonth(dateInGivenFormat[1]);
-		String year = dateInGivenFormat[2];
-
-		return new String(year + "-" + month + "-" + day);
 	}
 }
