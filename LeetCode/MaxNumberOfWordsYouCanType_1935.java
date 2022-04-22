@@ -1,11 +1,10 @@
 class Solution {
 	public int canBeTypedWords(String text, String brokenLetters) {
 		int count = 0;
-		String[] words = text.split(" ");
-		char[] brokenLettersToCharArray = brokenLetters.toCharArray();
+		final String[] words = text.split(" ");
 
 		for (final String word : words) {
-			for (final char brokenLetter : brokenLettersToCharArray) {
+			for (final char brokenLetter : brokenLetters.toCharArray()) {
 				if (word.contains(Character.toString(brokenLetter))) {
 					count++;
 					break;
