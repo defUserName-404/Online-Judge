@@ -1,4 +1,4 @@
-public class FindGreatestCommonDivisorOfArray_1979 {
+class Solution {
 	private int gcd(int a, int b) {
 		return ((b == 0) ? a : gcd(b, a % b));
 	}

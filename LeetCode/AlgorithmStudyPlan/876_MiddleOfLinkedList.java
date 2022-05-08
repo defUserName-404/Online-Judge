@@ -1,6 +1,6 @@
 package AlgorithmStudyPlan;
 
-public class MiddleOfLinkedList_876 {
+class Solution {
 	public ListNode middleNode(ListNode head) {
 		ListNode fast = head, slow = head;
 

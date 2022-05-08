@@ -1,6 +1,6 @@
 import AlgorithmStudyPlan.ListNode;
 
-public class AddTwoNumbers_2 {
+class Solution {
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode sum = new ListNode();
 		ListNode temp = sum;
