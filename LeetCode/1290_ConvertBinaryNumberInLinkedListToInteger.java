@@ -1,6 +1,7 @@
 import AlgorithmStudyPlan.ListNode;
 
 class Solution {
+
 	public int getDecimalValue(ListNode head) {
 		ListNode current = head;
 		StringBuilder value = new StringBuilder();
