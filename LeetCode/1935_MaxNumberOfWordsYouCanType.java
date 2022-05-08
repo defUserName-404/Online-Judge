@@ -1,4 +1,5 @@
 class Solution {
+
 	public int canBeTypedWords(String text, String brokenLetters) {
 		int count = 0;
 		final String[] words = text.split(" ");

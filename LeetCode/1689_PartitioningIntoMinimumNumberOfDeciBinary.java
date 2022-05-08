@@ -1,4 +1,5 @@
-public class PartitioningIntoMinimumNumberOfDeciBinary_1689 {
+class Solution {
+	
 	public int minPartitions(String number) {
 		int maximumDigit = 0;
 

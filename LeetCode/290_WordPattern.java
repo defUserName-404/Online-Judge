@@ -2,6 +2,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 class Solution {
+
 	public boolean wordPattern(String pattern, String s) {
 		String[] words = s.split(" ");
 		Map<Character, String> myMap = new HashMap<>();

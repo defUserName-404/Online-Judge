@@ -1,4 +1,4 @@
-public class ReformatDate_1507 {
+class Solution {
 
 	public String reformatDate(String date) {
 		String[] dateInGivenFormat = date.split(" ");
