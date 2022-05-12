@@ -31,16 +31,17 @@ class ParkingSystem {
 
 	public boolean addCar(int carType) {
 		CarType[] allCarTypes = CarType.values();
-		int left = 0;
+		int carSlotsLeft = 0;
 
 		for (final CarType currentCarType : allCarTypes) {
 			if (currentCarType.getType() == carType) {
-				left = cars.get(currentCarType);
-				cars.put(currentCarType, left - 1);
+				carSlotsLeft = cars.get(currentCarType);
+				cars.put(currentCarType, carSlotsLeft - 1);
+				break;
 			}
 		}
 
-		return (left > 0);
+		return (carSlotsLeft > 0);
 	}
 }
 
