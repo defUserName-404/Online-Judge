@@ -21,8 +21,8 @@ class Solution {
 		Map<Character, Integer> occurranceMapSorted = occurranceMapUnsorted.entrySet()
 				.stream()
 				.sorted(Entry.comparingByValue(Comparator.reverseOrder()))
-				.collect(Collectors.toMap(
-						Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+				.collect(Collectors.toMap(Entry::getKey,
+						Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 
 		StringBuilder ans = new StringBuilder();
 
