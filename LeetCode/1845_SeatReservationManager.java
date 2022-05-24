@@ -1,31 +1,23 @@
-/*
-	! TLE
-*/
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 class SeatManager {
 
-	private boolean[] isReserved;
-	private int totalSeats;
+	private Queue<Integer> seats;
 
 	public SeatManager(int n) {
-		totalSeats = n;
-		isReserved = new boolean[totalSeats];
+		seats = new PriorityQueue<>();
+
+		for (int i = 1; i <= n; i++)
+			seats.add(i);
 	}
 
 	public int reserve() {
-		for (int i = 0; i < totalSeats; i++) {
-			if (!isReserved[i]) {
-				isReserved[i] = true;
-
-				return i + 1;
-			}
-		}
-
-		return -1;
+		return seats.poll();
 	}
 
 	public void unreserve(int seatNumber) {
-		isReserved[seatNumber - 1] = false;
+		seats.add(seatNumber);
 	}
 }
 
