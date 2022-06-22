@@ -8,17 +8,11 @@ class Solution
 
 int Solution::findMaxConsecutiveOnes(std::vector<int> &nums)
 {
-    int current, global;
-
-    current = global = 0;
+    int current = 0, global = 0;
 
     for (int x : nums)
     {
-        if (x)
-            ++current;
-        else
-            current = 0;
-
+        current = x ? current + 1 : 0;
         global = std::max(current, global);
     }
 
