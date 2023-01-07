@@ -6,33 +6,21 @@ void solution()
 {
     string str;
     getline(cin, str);
-    vector<char> v, c;
+    string vowels, consonants;
 
-    for (auto i : str)
+    for (const auto i : str)
     {
         if (i >= 'a' && i <= 'z')
         {
-            if ((i == 'a') || (i == 'e') || (i == 'i') || (i == 'o') || (i = 'u'))
-                v.push_back(i);
+            if ((i == 'a') || (i == 'e') || (i == 'i') || (i == 'o') || (i == 'u'))
+                vowels += i;
             else
-                c.push_back(i);
-        }
-        else if (i >= 'A' && i <= 'Z')
-        {
-            if ((i == 'A') || (i == 'E') || (i == 'I') || (i == 'O') || (i == 'U'))
-                v.push_back(i);
-            else
-                c.push_back(i);
+                consonants += i;
         }
     }
 
-    for (auto i : v)
-        cout << i;
-    cout << "\n";
-
-    for (auto i : c)
-        cout << i;
-    cout << "\n";
+    cout << vowels << "\n"
+         << consonants << "\n";
 }
 
 int main()

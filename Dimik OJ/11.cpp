@@ -12,7 +12,6 @@ int main()
     for (int loop = 1; loop <= testCase; loop++)
     {
         cin >> n;
-
         fact = 1;
 
         for (int i = 1; i <= n; i++)

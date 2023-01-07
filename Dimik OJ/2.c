@@ -3,16 +3,14 @@
 
 int main()
 {
-    int testCase, i;
+    int testCase;
     char num[101];
     scanf("%d", &testCase);
 
-    for (i = 1; i <= testCase; i++)
+    for (int i = 1; i <= testCase; i++)
     {
         scanf("%s", &num);
-
-        int len = strlen(num) - 1;
-        int lastDigit = num[len];
+        int lastDigit = num[strlen(num) - 1];
 
         (lastDigit % 2 == 0) ? printf("even\n") : printf("odd\n");
     }

@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main()
@@ -19,13 +20,13 @@ int main()
 
         for (int i = 0; i < 3; i++)
         {
+            cout << num[i];
+
             if (i != 2)
-                cout << num[i] << " ";
-            else
-                cout << num[i];
+                cout << " ";
         }
 
-        cout << endl;
+        cout << "\n";
     }
 
     return 0;

@@ -7,10 +7,8 @@ void out(char in[], char c)
     int i;
 
     for (i = 0; i < strlen(in); i++)
-    {
         if (in[i] == c)
             count++;
-    }
     if (count > 0)
         printf("Occurrence of '%c' in '%s' = %d\n", c, in, count);
     else
