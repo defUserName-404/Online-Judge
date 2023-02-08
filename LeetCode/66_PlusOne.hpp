@@ -14,6 +14,9 @@ class Solution
             current = digits[i] + carry;
             digits[i] = current % 10;
             carry = current / 10;
+
+            if (carry == 0)
+                return digits;
         }
 
         if (carry)
