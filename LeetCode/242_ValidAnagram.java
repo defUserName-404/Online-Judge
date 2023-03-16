@@ -1,23 +1,4 @@
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.stream.Collectors;
-
-// class Solution {
-
-// 	public boolean isAnagram(String s, String t) {
-// 		Map<String, Long> sOccurrance = Arrays.stream(s.split(""))
-// 				.map(String::toLowerCase)
-// 				.collect(Collectors.groupingBy(str -> str, LinkedHashMap::new, Collectors.counting()));
-
-// 		Map<String, Long> tOccurrance = Arrays.stream(t.split(""))
-// 				.map(String::toLowerCase)
-// 				.collect(Collectors.groupingBy(str -> str, LinkedHashMap::new, Collectors.counting()));
-
-// 		return sOccurrance.equals(tOccurrance);
-// 	}
-
-// }
 
 class Solution {
 
