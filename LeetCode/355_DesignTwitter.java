@@ -1,20 +1,12 @@
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 class Twitter {
 
 	private static final int FEED_SIZE = 10;
 
-	private Map<Integer, Set<Integer>> followers;
-	private Map<Integer, Set<Tweet>> tweets;
+	private final Map<Integer, Set<Integer>> followers;
+	private final Map<Integer, Set<Tweet>> tweets;
 
 	public Twitter() {
 		followers = new HashMap<>();
@@ -37,35 +29,11 @@ class Twitter {
 		TwitterActions.unfollow(followers, new User(followerId), new User(followeeId));
 	}
 
-	private static class User {
-		private int userId;
+	private record User(int userId) {
 
-		User(int userId) {
-			this.userId = userId;
-		}
-
-		public int getUserId() {
-			return userId;
-		}
 	}
 
-	private static class Tweet implements Comparable<Tweet> {
-
-		private int tweetId;
-		private Instant timestamp;
-
-		Tweet(int tweetId, Instant timestamp) {
-			this.tweetId = tweetId;
-			this.timestamp = timestamp;
-		}
-
-		public int getTweetId() {
-			return tweetId;
-		}
-
-		public Instant getTimestamp() {
-			return timestamp;
-		}
+	private record Tweet(int tweetId, Instant timestamp) implements Comparable<Tweet> {
 
 		@Override
 		public int compareTo(Tweet other) {
@@ -74,18 +42,10 @@ class Twitter {
 
 		@Override
 		public boolean equals(Object o) {
-			if (this == o)
-				return true;
-			if (o == null || getClass() != o.getClass())
-				return false;
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
 			Tweet tweet = (Tweet) o;
-			return tweetId == tweet.tweetId &&
-					timestamp.equals(tweet.timestamp);
-		}
-
-		@Override
-		public int hashCode() {
-			return Objects.hash(tweetId, timestamp);
+			return tweetId == tweet.tweetId && timestamp.equals(tweet.timestamp);
 		}
 
 	}
@@ -94,15 +54,14 @@ class Twitter {
 
 		public static void postTweet(Map<Integer, Set<Tweet>> tweets, User user, int tweetId) {
 			Tweet tweet = new Tweet(tweetId, Instant.now());
-			tweets.computeIfAbsent(user.getUserId(), k -> new TreeSet<>()).add(tweet);
+			tweets.computeIfAbsent(user.userId(), k -> new TreeSet<>()).add(tweet);
 		}
 
-		public static List<Integer> getNewsFeed(Map<Integer, Set<Tweet>> tweets,
-				Map<Integer, Set<Integer>> followers, User user) {
+		public static List<Integer> getNewsFeed(Map<Integer, Set<Tweet>> tweets, Map<Integer, Set<Integer>> followers, User user) {
 			Set<Tweet> newsFeed = new TreeSet<>(Comparator.reverseOrder());
-			Set<Tweet> userTweets = tweets.getOrDefault(user.getUserId(), new TreeSet<>());
+			Set<Tweet> userTweets = tweets.getOrDefault(user.userId(), new TreeSet<>());
 			newsFeed.addAll(userTweets);
-			Set<Integer> followees = followers.getOrDefault(user.getUserId(), new HashSet<>());
+			Set<Integer> followees = followers.getOrDefault(user.userId(), new HashSet<>());
 			for (int followee : followees) {
 				Set<Tweet> followeeTweets = tweets.getOrDefault(followee, new TreeSet<>());
 				newsFeed.addAll(followeeTweets);
@@ -110,7 +69,7 @@ class Twitter {
 			List<Integer> result = new ArrayList<>();
 			int count = 0;
 			for (Tweet tweet : newsFeed) {
-				result.add(tweet.getTweetId());
+				result.add(tweet.tweetId());
 				count++;
 				if (count == FEED_SIZE) {
 					break;
@@ -121,15 +80,16 @@ class Twitter {
 		}
 
 		public static void follow(Map<Integer, Set<Integer>> followers, User follower, User followee) {
-			followers.computeIfAbsent(follower.getUserId(), k -> new HashSet<>()).add(followee.getUserId());
+			followers.computeIfAbsent(follower.userId(), k -> new HashSet<>()).add(followee.userId());
 		}
 
 		public static void unfollow(Map<Integer, Set<Integer>> followers, User follower, User followee) {
-			followers.computeIfPresent(follower.getUserId(), (k, v) -> {
-				v.remove(followee.getUserId());
+			followers.computeIfPresent(follower.userId(), (k, v) -> {
+				v.remove(followee.userId());
 				return v;
 			});
 		}
+
 	}
 
 }
