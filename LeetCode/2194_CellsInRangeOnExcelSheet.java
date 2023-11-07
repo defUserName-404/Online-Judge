@@ -12,7 +12,7 @@ class Solution {
 
 		for (char i = colum1; i <= colum2; i++) {
 			for (char j = row1; j <= row2; j++) {
-				String cell = String.valueOf(i) + String.valueOf(j);
+				String cell = String.valueOf(i) + j;
 
 				sList.add(cell);
 			}
@@ -20,4 +20,5 @@ class Solution {
 
 		return sList;
 	}
+
 }

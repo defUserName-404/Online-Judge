@@ -13,12 +13,12 @@ class Solution {
 		for (int i = 0; i < n; i++) {
 			int currentMax = 0;
 
-			for (int j = 0; j < m; j++)
-				currentMax = Math.max(currentMax, grid[j][i]);
+			for (int[] ints : grid) currentMax = Math.max(currentMax, ints[i]);
 
 			result += currentMax;
 		}
 
 		return result;
 	}
+
 }

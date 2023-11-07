@@ -15,4 +15,5 @@ class Solution {
 
 		return words.length - count;
 	}
+
 }

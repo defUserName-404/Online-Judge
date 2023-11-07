@@ -13,11 +13,11 @@ class Solution {
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
-				if (heightsSorted[i] == heights[j])
-					namesSorted[i] = names[j];
+				if (heightsSorted[i] == heights[j]) namesSorted[i] = names[j];
 			}
 		}
 
 		return namesSorted;
 	}
+
 }

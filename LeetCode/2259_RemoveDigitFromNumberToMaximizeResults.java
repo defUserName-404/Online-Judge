@@ -42,4 +42,5 @@ class Solution {
 
 		return (number.substring(0, index) + number.substring(index + 1));
 	}
+
 }

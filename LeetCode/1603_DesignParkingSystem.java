@@ -20,7 +20,7 @@ enum CarType {
 
 class ParkingSystem {
 
-	private Map<CarType, Integer> cars;
+	private final Map<CarType, Integer> cars;
 
 	public ParkingSystem(int big, int medium, int small) {
 		cars = new HashMap<>();
@@ -43,6 +43,7 @@ class ParkingSystem {
 
 		return (carSlotsLeft > 0);
 	}
+
 }
 
 /**

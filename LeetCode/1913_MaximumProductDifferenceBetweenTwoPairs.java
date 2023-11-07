@@ -11,4 +11,5 @@ class Solution {
 
 		return lastTwo - firstTwo;
 	}
+
 }

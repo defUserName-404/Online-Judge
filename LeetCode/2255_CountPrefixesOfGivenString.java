@@ -1,4 +1,5 @@
 class Solution {
+
 	public int countPrefixes(String[] words, String s) {
 		int count = 0;
 
@@ -16,4 +17,5 @@ class Solution {
 
 		return count;
 	}
+
 }

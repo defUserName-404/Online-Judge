@@ -1,6 +1,6 @@
 class SmallestInfiniteSet {
 
-	private byte[] numbers;
+	private final byte[] numbers;
 
 	public SmallestInfiniteSet() {
 		numbers = new byte[1001];
@@ -25,6 +25,7 @@ class SmallestInfiniteSet {
 	public void addBack(int num) {
 		numbers[num] = 1;
 	}
+
 }
 
 /**

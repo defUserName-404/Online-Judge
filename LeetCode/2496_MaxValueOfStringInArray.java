@@ -10,8 +10,10 @@ class Solution {
 				if (!onlyDigits)
 					break;
 
-				if (!(ch >= '0' && ch <= '9'))
+				if (!(ch >= '0' && ch <= '9')) {
 					onlyDigits = false;
+					break;
+				}
 			}
 
 			int current = onlyDigits ? Integer.parseInt(str) : str.length();
@@ -22,4 +24,5 @@ class Solution {
 
 		return global;
 	}
+
 }
