@@ -9,8 +9,8 @@ class Solution {
 		Map<Integer, Integer> scoreAndPosition = new HashMap<>();
 		String[] rank = new String[score.length];
 		Arrays.sort(score, Collections.reverseOrder());
-		
 
 		return rank;
 	}
+
 }
