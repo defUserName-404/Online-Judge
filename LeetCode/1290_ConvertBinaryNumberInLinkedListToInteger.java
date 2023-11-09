@@ -14,4 +14,5 @@ class Solution {
 
 		return Integer.parseInt(value.toString(), 2);
 	}
+
 }
