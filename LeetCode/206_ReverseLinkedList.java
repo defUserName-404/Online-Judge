@@ -1,7 +1,7 @@
 import AlgorithmStudyPlan.ListNode;
 
 class Solution {
-	
+
 	public ListNode reverseList(ListNode head) {
 		ListNode reversed = null,
 				next = null,
@@ -16,4 +16,5 @@ class Solution {
 
 		return reversed;
 	}
+
 }

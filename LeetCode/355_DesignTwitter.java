@@ -42,8 +42,10 @@ class Twitter {
 
 		@Override
 		public boolean equals(Object o) {
-			if (this == o) return true;
-			if (o == null || getClass() != o.getClass()) return false;
+			if (this == o)
+				return true;
+			if (o == null || getClass() != o.getClass())
+				return false;
 			Tweet tweet = (Tweet) o;
 			return tweetId == tweet.tweetId && timestamp.equals(tweet.timestamp);
 		}
@@ -57,7 +59,8 @@ class Twitter {
 			tweets.computeIfAbsent(user.userId(), k -> new TreeSet<>()).add(tweet);
 		}
 
-		public static List<Integer> getNewsFeed(Map<Integer, Set<Tweet>> tweets, Map<Integer, Set<Integer>> followers, User user) {
+		public static List<Integer> getNewsFeed(Map<Integer, Set<Tweet>> tweets, Map<Integer, Set<Integer>> followers,
+				User user) {
 			Set<Tweet> newsFeed = new TreeSet<>(Comparator.reverseOrder());
 			Set<Tweet> userTweets = tweets.getOrDefault(user.userId(), new TreeSet<>());
 			newsFeed.addAll(userTweets);
