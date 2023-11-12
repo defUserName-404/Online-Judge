@@ -2,16 +2,17 @@ import AlgorithmStudyPlan.TreeNode;
 
 class Solution {
 
-	public TreeNode invertTree(TreeNode root) {
-		if (root == null)
-			return null;
+  public TreeNode invertTree(TreeNode root) {
+    if (root == null) {
+      return null;
+    }
 
-		TreeNode leftNode = invertTree(root.left);
-		TreeNode rightNode = invertTree(root.right);
+    TreeNode leftNode = invertTree(root.left);
 
-		root.left = rightNode;
-		root.right = leftNode;
+    root.left = invertTree(root.right);
+    root.right = leftNode;
 
-		return root;
-	}
+    return root;
+  }
+
 }
