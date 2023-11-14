@@ -16,8 +16,9 @@ class Solution {
 		for (int i = 0; i < sortedSentenceArray.length; i++) {
 			sortedSentencStringBuilder.append(sortedSentenceArray[i]);
 
-			if (i != sortedSentenceArray.length - 1)
+			if (i != sortedSentenceArray.length - 1) {
 				sortedSentencStringBuilder.append(" ");
+			}
 		}
 
 		return sortedSentencStringBuilder.toString();

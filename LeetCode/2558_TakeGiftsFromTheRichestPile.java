@@ -12,8 +12,9 @@ class Solution {
 			k--;
 		}
 
-		for (int gift : gifts)
+		for (int gift : gifts) {
 			result += gift;
+		}
 
 		return result;
 	}

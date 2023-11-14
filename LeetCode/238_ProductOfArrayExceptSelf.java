@@ -14,14 +14,19 @@ class Solution {
 			mul *= num;
 		}
 
-		if (numberOfZeros < 1)
-			for (int i = 0; i < nums.length; i++)
+		if (numberOfZeros < 1) {
+			for (int i = 0; i < nums.length; i++) {
 				ans[i] = mul / nums[i];
+			}
+		}
 
-		else if (numberOfZeros == 1)
-			for (int i = 0; i < nums.length; i++)
+		else if (numberOfZeros == 1) {
+			for (int i = 0; i < nums.length; i++) {
 				ans[i] = nums[i] == 0 ? mul : 0;
+			}
+		}
 
 		return ans;
 	}
+
 }

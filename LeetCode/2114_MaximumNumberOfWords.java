@@ -8,10 +8,12 @@ class Solution {
 
 			current = words.length;
 
-			if (current > globalMax)
+			if (current > globalMax) {
 				globalMax = current;
+			}
 		}
 
 		return globalMax;
 	}
+
 }

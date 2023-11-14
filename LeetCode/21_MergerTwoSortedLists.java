@@ -1,13 +1,7 @@
-
 /**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
+ * Definition for singly-linked list. public class ListNode { int val; ListNode next; ListNode() {}
+ * ListNode(int val) { this.val = val; } ListNode(int val, ListNode next) { this.val = val;
+ * this.next = next; } }
  */
 
 // * Unsolved
@@ -21,9 +15,8 @@ class Solution {
 
 		while (true) {
 			if (list1 != null && list2 != null) {
-				int minVal = list1.val > list2.val ? list1.val : list2.val;
-				ListNode current = new ListNode(minVal);
-				result.next = current;
+				int minVal = Math.max(list1.val, list2.val);
+				result.next = new ListNode(minVal);
 				list1 = list1.next;
 				list2 = list2.next;
 			}

@@ -7,7 +7,8 @@ class Solution {
 			if (num1 >= num2) {
 				count += (num1 / num2);
 				num1 %= num2;
-			} else {
+			}
+			else {
 				count += (num2 / num1);
 				num2 %= num1;
 			}

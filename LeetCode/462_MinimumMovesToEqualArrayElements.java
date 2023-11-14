@@ -8,9 +8,11 @@ class Solution {
 		int median = nums[n / 2];
 		int result = 0;
 
-		for (final int num : nums)
+		for (final int num : nums) {
 			result += Math.abs(median - num);
+		}
 
 		return result;
 	}
+
 }

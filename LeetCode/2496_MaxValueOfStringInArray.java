@@ -7,8 +7,9 @@ class Solution {
 			boolean onlyDigits = (str.charAt(0) >= '0') && (str.charAt(0) <= '9');
 
 			for (char ch : str.toCharArray()) {
-				if (!onlyDigits)
+				if (!onlyDigits) {
 					break;
+				}
 
 				if (!(ch >= '0' && ch <= '9')) {
 					onlyDigits = false;
@@ -18,8 +19,9 @@ class Solution {
 
 			int current = onlyDigits ? Integer.parseInt(str) : str.length();
 
-			if (current > global)
+			if (current > global) {
 				global = current;
+			}
 		}
 
 		return global;

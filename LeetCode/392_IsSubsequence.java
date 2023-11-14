@@ -5,16 +5,18 @@ class Solution {
 		int lenOfTargetString = targetString.length();
 
 		if ((lenOfString > lenOfTargetString) ||
-				(lenOfString == lenOfTargetString && !string.equals(targetString)))
+			(lenOfString == lenOfTargetString && !string.equals(targetString))) {
 			return false;
+		}
 
 		int nextCharPosition = 0;
 
 		for (int i = 0; i < lenOfString; i++) {
 			int currentCharPosition = targetString.indexOf(string.charAt(i), nextCharPosition);
 
-			if (currentCharPosition == -1)
+			if (currentCharPosition == -1) {
 				return false;
+			}
 
 			nextCharPosition = currentCharPosition + 1;
 		}

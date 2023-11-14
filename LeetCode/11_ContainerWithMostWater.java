@@ -7,15 +7,19 @@ class Solution {
 		while (left < right) {
 			int currentWaterArea = Math.min(height[left], height[right]) * (right - left);
 
-			if (currentWaterArea > maxWaterArea)
+			if (currentWaterArea > maxWaterArea) {
 				maxWaterArea = currentWaterArea;
+			}
 
-			if (height[left] < height[right])
+			if (height[left] < height[right]) {
 				left++;
-			else
+			}
+			else {
 				right--;
+			}
 		}
 
 		return maxWaterArea;
 	}
+
 }

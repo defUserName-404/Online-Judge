@@ -1,4 +1,6 @@
-import java.util.Arrays;;
+import java.util.Arrays;
+
+;
 
 class Solution {
 
@@ -7,10 +9,13 @@ class Solution {
 		Arrays.sort(sortedHeights);
 		int count = 0;
 
-		for (int i = 0; i < heights.length; i++)
-			if (sortedHeights[i] != heights[i])
+		for (int i = 0; i < heights.length; i++) {
+			if (sortedHeights[i] != heights[i]) {
 				count++;
+			}
+		}
 
 		return count;
 	}
+
 }

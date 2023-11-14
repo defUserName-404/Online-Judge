@@ -9,12 +9,15 @@ class Solution {
 		int highest = nums[0];
 
 		for (int x : nums) {
-			if (x < lowest)
+			if (x < lowest) {
 				lowest = x;
-			else if (x > highest)
+			}
+			else if (x > highest) {
 				highest = x;
+			}
 		}
 
 		return gcd(lowest, highest);
 	}
+
 }

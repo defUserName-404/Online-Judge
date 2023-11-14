@@ -17,4 +17,5 @@ class Solution {
 
 		return (maxValue - 1) * (secondMaxValue - 1);
 	}
+
 }

@@ -35,8 +35,9 @@ class Solution {
 			if (number.charAt(i) == digit) {
 				index = i;
 
-				if (i < len - 1 && number.charAt(i + 1) > digit)
+				if (i < len - 1 && number.charAt(i + 1) > digit) {
 					break;
+				}
 			}
 		}
 

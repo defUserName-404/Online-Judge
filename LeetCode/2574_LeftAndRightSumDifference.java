@@ -3,7 +3,9 @@ import java.util.Arrays;
 class Solution {
 
 	public int[] leftRigthDifference(int[] nums) {
-		int leftSum = 0, rightSum = Arrays.stream(nums).sum();
+		int leftSum = 0, rightSum = Arrays
+			.stream(nums)
+			.sum();
 		int[] answer = new int[nums.length];
 
 		for (int i = 0; i < answer.length; i++) {

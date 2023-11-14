@@ -4,15 +4,18 @@ class Solution {
 
 	public ListNode removeElements(ListNode head, int val) {
 		ListNode result = new ListNode(0, head),
-				current = result;
+			current = result;
 
 		while (current.next != null) {
-			if (current.next.val == val)
+			if (current.next.val == val) {
 				current.next = current.next.next;
-			else
+			}
+			else {
 				current = current.next;
+			}
 		}
 
 		return result.next;
 	}
+
 }

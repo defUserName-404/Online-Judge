@@ -1,9 +1,11 @@
 class Solution {
 
 	public boolean isStrictlyPalindromic(int n) {
-		for (int i = 2; i <= n - 2; i++)
-			if (!isPalindrome(Integer.toString(n, i)))
+		for (int i = 2; i <= n - 2; i++) {
+			if (!isPalindrome(Integer.toString(n, i))) {
 				return false;
+			}
+		}
 
 		return true;
 	}

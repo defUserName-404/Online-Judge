@@ -9,16 +9,18 @@ class Solution {
 
 		while (left <= right) {
 			if (heights[left] <= heights[right]) {
-				if (heights[left] > maxLeft)
+				if (heights[left] > maxLeft) {
 					maxLeft = heights[left];
-				else
+				} else {
 					waterVolume += maxLeft - heights[left];
+				}
 				left++;
 			} else {
-				if (heights[right] > maxRight)
+				if (heights[right] > maxRight) {
 					maxRight = heights[right];
-				else
+				} else {
 					waterVolume += maxRight - heights[right];
+				}
 				right--;
 			}
 		}

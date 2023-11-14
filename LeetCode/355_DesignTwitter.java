@@ -1,5 +1,12 @@
 import java.time.Instant;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 class Twitter {
 
@@ -42,10 +49,12 @@ class Twitter {
 
 		@Override
 		public boolean equals(Object o) {
-			if (this == o)
+			if (this == o) {
 				return true;
-			if (o == null || getClass() != o.getClass())
+			}
+			if (o == null || getClass() != o.getClass()) {
 				return false;
+			}
 			Tweet tweet = (Tweet) o;
 			return tweetId == tweet.tweetId && timestamp.equals(tweet.timestamp);
 		}
@@ -56,11 +65,15 @@ class Twitter {
 
 		public static void postTweet(Map<Integer, Set<Tweet>> tweets, User user, int tweetId) {
 			Tweet tweet = new Tweet(tweetId, Instant.now());
-			tweets.computeIfAbsent(user.userId(), k -> new TreeSet<>()).add(tweet);
+			tweets
+				.computeIfAbsent(user.userId(), k -> new TreeSet<>())
+				.add(tweet);
 		}
 
-		public static List<Integer> getNewsFeed(Map<Integer, Set<Tweet>> tweets, Map<Integer, Set<Integer>> followers,
-				User user) {
+		public static List<Integer> getNewsFeed(Map<Integer, Set<Tweet>> tweets,
+												Map<Integer, Set<Integer>> followers,
+												User user
+											   ) {
 			Set<Tweet> newsFeed = new TreeSet<>(Comparator.reverseOrder());
 			Set<Tweet> userTweets = tweets.getOrDefault(user.userId(), new TreeSet<>());
 			newsFeed.addAll(userTweets);
@@ -82,11 +95,17 @@ class Twitter {
 			return result;
 		}
 
-		public static void follow(Map<Integer, Set<Integer>> followers, User follower, User followee) {
-			followers.computeIfAbsent(follower.userId(), k -> new HashSet<>()).add(followee.userId());
+		public static void follow(Map<Integer, Set<Integer>> followers, User follower,
+								  User followee
+								 ) {
+			followers
+				.computeIfAbsent(follower.userId(), k -> new HashSet<>())
+				.add(followee.userId());
 		}
 
-		public static void unfollow(Map<Integer, Set<Integer>> followers, User follower, User followee) {
+		public static void unfollow(Map<Integer, Set<Integer>> followers, User follower,
+									User followee
+								   ) {
 			followers.computeIfPresent(follower.userId(), (k, v) -> {
 				v.remove(followee.userId());
 				return v;

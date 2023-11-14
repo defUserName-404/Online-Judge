@@ -1,8 +1,8 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 class Solution {
 
@@ -20,8 +20,8 @@ class Solution {
 			String stringSorted = sortedString(string);
 
 			List<String> anagrams = stringOccurranceMap.containsKey(stringSorted)
-					? stringOccurranceMap.get(stringSorted)
-					: new ArrayList<>();
+				? stringOccurranceMap.get(stringSorted)
+				: new ArrayList<>();
 
 			anagrams.add(string);
 			stringOccurranceMap.put(stringSorted, anagrams);
@@ -29,4 +29,5 @@ class Solution {
 
 		return new ArrayList<>(stringOccurranceMap.values());
 	}
+
 }

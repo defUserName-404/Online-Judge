@@ -12,7 +12,8 @@ class Solution {
 			if (workingTime > currentLongest) {
 				employee = id;
 				currentLongest = workingTime;
-			} else if (workingTime == currentLongest) {
+			}
+			else if (workingTime == currentLongest) {
 				employee = Math.min(id, employee);
 			}
 		}

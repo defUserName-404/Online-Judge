@@ -10,7 +10,8 @@ class Solution {
 		for (int i = 1; i < prefixArrayOfVowelStrings.length; i++) {
 			final String word = words[i - 1];
 
-			prefixArrayOfVowelStrings[i] = isVowel(word.charAt(0)) && isVowel(word.charAt(word.length() - 1))
+			prefixArrayOfVowelStrings[i] =
+				isVowel(word.charAt(0)) && isVowel(word.charAt(word.length() - 1))
 					? prefixArrayOfVowelStrings[i - 1] + 1
 					: prefixArrayOfVowelStrings[i - 1];
 		}
@@ -26,4 +27,5 @@ class Solution {
 
 		return result;
 	}
+
 }

@@ -8,16 +8,16 @@ class Solution {
 	 */
 	public double average1(int[] salary) {
 		int totalSalary = Arrays
-				.stream(salary)
-				.sum();
+			.stream(salary)
+			.sum();
 		int maxSalary = Arrays
-				.stream(salary)
-				.max()
-				.getAsInt();
+			.stream(salary)
+			.max()
+			.getAsInt();
 		int minSalary = Arrays
-				.stream(salary)
-				.min()
-				.getAsInt();
+			.stream(salary)
+			.min()
+			.getAsInt();
 
 		return ((double) totalSalary - maxSalary - minSalary) / (salary.length - 2);
 	}
@@ -28,17 +28,20 @@ class Solution {
 	public double average2(int[] salary) {
 		double totalSalary = 0;
 		int maxSalary = Integer.MIN_VALUE,
-				minSalary = Integer.MAX_VALUE;
+			minSalary = Integer.MAX_VALUE;
 
 		for (final int x : salary) {
-			if (x > maxSalary)
+			if (x > maxSalary) {
 				maxSalary = x;
-			if (x < minSalary)
+			}
+			if (x < minSalary) {
 				minSalary = x;
+			}
 
 			totalSalary += x;
 		}
 
 		return ((totalSalary - maxSalary - minSalary) / (salary.length - 2));
 	}
+
 }

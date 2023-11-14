@@ -11,16 +11,20 @@ class Solution {
 			int mid = (low + high) / 2;
 			int value = nums[mid];
 
-			if (value > target)
+			if (value > target) {
 				high = mid - 1;
-			else if (value < target)
+			}
+			else if (value < target) {
 				low = mid + 1;
+			}
 			else {
 				index = mid;
-				if (position == Position.FIRST)
+				if (position == Position.FIRST) {
 					high = mid - 1;
-				else if (position == Position.LAST)
+				}
+				else if (position == Position.LAST) {
 					low = mid + 1;
+				}
 			}
 		}
 
@@ -34,7 +38,7 @@ class Solution {
 		int firstIndex = getOccurrance(Position.FIRST);
 		int lastIndex = getOccurrance(Position.LAST);
 
-		return new int[] { firstIndex, lastIndex };
+		return new int[]{firstIndex, lastIndex};
 	}
 
 	private static enum Position {
@@ -42,4 +46,5 @@ class Solution {
 		FIRST,
 		LAST
 	}
+
 }

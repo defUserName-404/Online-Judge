@@ -8,10 +8,12 @@ class Solution {
 
 			if (command.charAt(i) == 'G') {
 				parsedString = "G";
-			} else if (command.charAt(i) == '(' && command.charAt(i + 1) == ')') {
+			}
+			else if (command.charAt(i) == '(' && command.charAt(i + 1) == ')') {
 				parsedString = "o";
 				i += 1;
-			} else {
+			}
+			else {
 				parsedString = "al";
 				i += 3;
 			}

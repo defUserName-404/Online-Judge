@@ -4,8 +4,9 @@ class SmallestInfiniteSet {
 
 	public SmallestInfiniteSet() {
 		numbers = new byte[1001];
-		for (int i = 1; i <= 1000; i++)
+		for (int i = 1; i <= 1000; i++) {
 			numbers[i] = 1;
+		}
 	}
 
 	public int popSmallest() {
@@ -29,8 +30,6 @@ class SmallestInfiniteSet {
 }
 
 /**
- * Your SmallestInfiniteSet object will be instantiated and called as such:
- * SmallestInfiniteSet obj = new SmallestInfiniteSet();
- * int param_1 = obj.popSmallest();
- * obj.addBack(num);
+ * Your SmallestInfiniteSet object will be instantiated and called as such: SmallestInfiniteSet obj
+ * = new SmallestInfiniteSet(); int param_1 = obj.popSmallest(); obj.addBack(num);
  */

@@ -3,8 +3,9 @@ import java.util.Map;
 
 class Solution {
 
-    public int romanToInt(String givenValue) {
-		Map<Character, Integer> roman = new HashMap<Character, Integer>() { {
+	public int romanToInt(String givenValue) {
+		Map<Character, Integer> roman = new HashMap<Character, Integer>() {
+			{
 				put('I', 1);
 				put('V', 5);
 				put('X', 10);
@@ -18,13 +19,16 @@ class Solution {
 		int ans = 0;
 
 		for (int i = 0; i < givenValue.length(); i++) {
-			if (i < givenValue.length() - 1 && roman.get(givenValue.charAt(i)) < roman.get(givenValue.charAt(i + 1)))
+			if (i < givenValue.length() - 1 && roman.get(givenValue.charAt(i)) < roman.get(
+				givenValue.charAt(i + 1))) {
 				ans -= roman.get(givenValue.charAt(i));
-			else
+			}
+			else {
 				ans += roman.get(givenValue.charAt(i));
+			}
 		}
 
 		return ans;
-    }
+	}
 
 }

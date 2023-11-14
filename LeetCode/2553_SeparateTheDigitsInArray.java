@@ -14,11 +14,15 @@ class Solution {
 				num /= 10;
 			}
 
-			for (int i = temp.size() - 1; i >= 0; i--)
+			for (int i = temp.size() - 1; i >= 0; i--) {
 				result.add(temp.get(i));
+			}
 		}
 
-		return result.stream().mapToInt(Integer::intValue).toArray();
+		return result
+			.stream()
+			.mapToInt(Integer::intValue)
+			.toArray();
 	}
 
 }

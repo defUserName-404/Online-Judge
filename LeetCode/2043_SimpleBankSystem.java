@@ -10,11 +10,12 @@ class Bank {
 
 	public boolean transfer(int account1, int account2, long money) {
 		if ((account1 >= 1 && account1 <= totalAccounts)
-				&& (account2 >= 1 && account2 <= totalAccounts)) {
+			&& (account2 >= 1 && account2 <= totalAccounts)) {
 			long fromAccountNewBalance = balance[account1 - 1] - money;
 
-			if (fromAccountNewBalance < 0)
+			if (fromAccountNewBalance < 0) {
 				return false;
+			}
 
 			balance[account1 - 1] -= money;
 			balance[account2 - 1] += money;
@@ -41,8 +42,9 @@ class Bank {
 		if (account >= 1 && account <= totalAccounts) {
 			long fromAccountNewBalance = balance[account - 1] - money;
 
-			if (fromAccountNewBalance < 0)
+			if (fromAccountNewBalance < 0) {
 				return false;
+			}
 
 			balance[account - 1] = fromAccountNewBalance;
 
@@ -51,12 +53,11 @@ class Bank {
 
 		return false;
 	}
+
 }
 
 /**
- * Your Bank object will be instantiated and called as such:
- * Bank obj = new Bank(balance);
- * boolean param_1 = obj.transfer(account1,account2,money);
- * boolean param_2 = obj.deposit(account,money);
+ * Your Bank object will be instantiated and called as such: Bank obj = new Bank(balance); boolean
+ * param_1 = obj.transfer(account1,account2,money); boolean param_2 = obj.deposit(account,money);
  * boolean param_3 = obj.withdraw(account,money);
  */

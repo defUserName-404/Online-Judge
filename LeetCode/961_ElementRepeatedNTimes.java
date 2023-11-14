@@ -7,8 +7,9 @@ class Solution {
 		Map<Integer, Integer> occurranceMap = new HashMap<>();
 
 		for (final int num : nums) {
-			if (occurranceMap.containsKey(num))
+			if (occurranceMap.containsKey(num)) {
 				return num;
+			}
 
 			occurranceMap.put(num, 1);
 		}

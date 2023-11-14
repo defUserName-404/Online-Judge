@@ -17,8 +17,9 @@ class Solution {
 		StringBuilder decodedMessage = new StringBuilder();
 
 		for (char ch : message.toCharArray()) {
-			if (ch != ' ')
+			if (ch != ' ') {
 				ch = keyMap.get(ch);
+			}
 
 			decodedMessage.append(ch);
 		}

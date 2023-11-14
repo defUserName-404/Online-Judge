@@ -15,10 +15,12 @@ class Solution {
 			int left = prefixSum[i] - num;
 			int right = sum - left - num;
 
-			if (left == right)
+			if (left == right) {
 				return i;
+			}
 		}
 
 		return -1;
 	}
+
 }

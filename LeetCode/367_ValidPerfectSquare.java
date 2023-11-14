@@ -14,10 +14,12 @@ class Solution {
 			num -= oddNum;
 			oddNum += 2;
 
-			if (num == 0)
+			if (num == 0) {
 				return true;
+			}
 		}
 
 		return false;
 	}
+
 }

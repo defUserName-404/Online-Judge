@@ -4,7 +4,7 @@ class Solution {
 
 	public ListNode removeNthFromEnd(ListNode head, int n) {
 		ListNode temp = head,
-				afterRemoval = new ListNode(0);
+			afterRemoval = new ListNode(0);
 		int size = 0;
 		afterRemoval.val = head.val;
 
@@ -16,8 +16,9 @@ class Solution {
 		int toBeDeletedIndex = size - n;
 
 		for (int i = 0; i < size; i++) {
-			if (i == toBeDeletedIndex)
+			if (i == toBeDeletedIndex) {
 				continue;
+			}
 
 			afterRemoval.next = head;
 			head = head.next;
@@ -25,4 +26,5 @@ class Solution {
 
 		return afterRemoval;
 	}
+
 }

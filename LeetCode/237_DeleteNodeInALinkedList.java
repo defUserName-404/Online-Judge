@@ -7,7 +7,6 @@ class Solution {
 
 		node.val = current.val;
 		node.next = current.next;
-
-		current = null;
 	}
+
 }

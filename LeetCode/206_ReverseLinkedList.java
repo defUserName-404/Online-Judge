@@ -4,8 +4,8 @@ class Solution {
 
 	public ListNode reverseList(ListNode head) {
 		ListNode reversed = null,
-				next = null,
-				current = head;
+			next = null,
+			current = head;
 
 		while (current != null) {
 			next = current.next;
