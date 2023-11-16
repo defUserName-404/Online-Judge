@@ -1,18 +1,26 @@
 import pandas as pd
 
-from solutions.combine_two_tables_175 import combine_two_tables
+from solutions.employee_bonus_577 import employee_bonus
 
 
 def test():
-	data = [[1, 'Wang', 'Allen'], [2, 'Alice', 'Bob']]
-	person = pd.DataFrame(data, columns=['personId', 'firstName', 'lastName']).astype(
-		{'personId': 'Int64', 'firstName': 'object', 'lastName': 'object'})
-	data = [[1, 2, 'New York City', 'New York'], [2, 3, 'Leetcode', 'California']]
-	address = pd.DataFrame(data, columns=['addressId', 'personId', 'city', 'state']).astype(
-		{'addressId': 'Int64', 'personId': 'Int64', 'city': 'object', 'state': 'object'})
-	name_with_address = combine_two_tables(person, address)
-	print(name_with_address)
+    data = [
+        [3, "Brad", None, 4000],
+        [1, "John", 3, 1000],
+        [2, "Dan", 3, 2000],
+        [4, "Thomas", 3, 4000],
+    ]
+    employee = pd.DataFrame(
+        data, columns=["empId", "name", "supervisor", "salary"]
+    ).astype(
+        {"empId": "Int64", "name": "object", "supervisor": "Int64", "salary": "Int64"}
+    )
+    data = [[2, 500], [4, 2000]]
+    bonus = pd.DataFrame(data, columns=["empId", "bonus"]).astype(
+        {"empId": "Int64", "bonus": "Int64"}
+    )
+    print(employee_bonus(employee, bonus))
 
 
-if __name__ == '__main__':
-	test()
+if __name__ == "__main__":
+    test()
