@@ -1,14 +1,15 @@
 import pandas as pd
 
-from solutions.rank_scores_178 import order_scores
-
 
 def test():
-    data = [[1, 3.5], [2, 3.65], [3, 4.0], [4, 3.85], [5, 4.0], [6, 3.65]]
-    scores = pd.DataFrame(data, columns=["id", "score"]).astype(
-        {"id": "Int64", "score": "Float64"}
-    )
-    print(order_scores(scores))
+    data = {
+        "name": ["Tatiana", "Khaled", "Alex", "Jonathan", "Stefan", "Tommy"],
+        "species": ["Snake", "Giraffe", "Leopard", "Monkey", "Bear", "Panda"],
+        "age": [98, 50, 6, 45, 100, 26],
+        "weight": [379, 410, 328, 50, 912, 347],
+    }
+    animals = pd.DataFrame(data)
+    print(animals.query("weight > 100").sort_values("weight", ascending=False)["name"])
 
 
 if __name__ == "__main__":
