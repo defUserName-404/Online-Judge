@@ -66,14 +66,14 @@ class Twitter {
 		public static void postTweet(Map<Integer, Set<Tweet>> tweets, User user, int tweetId) {
 			Tweet tweet = new Tweet(tweetId, Instant.now());
 			tweets
-				.computeIfAbsent(user.userId(), k -> new TreeSet<>())
-				.add(tweet);
+					.computeIfAbsent(user.userId(), k -> new TreeSet<>())
+					.add(tweet);
 		}
 
 		public static List<Integer> getNewsFeed(Map<Integer, Set<Tweet>> tweets,
 												Map<Integer, Set<Integer>> followers,
 												User user
-											   ) {
+		) {
 			Set<Tweet> newsFeed = new TreeSet<>(Comparator.reverseOrder());
 			Set<Tweet> userTweets = tweets.getOrDefault(user.userId(), new TreeSet<>());
 			newsFeed.addAll(userTweets);
@@ -97,15 +97,15 @@ class Twitter {
 
 		public static void follow(Map<Integer, Set<Integer>> followers, User follower,
 								  User followee
-								 ) {
+		) {
 			followers
-				.computeIfAbsent(follower.userId(), k -> new HashSet<>())
-				.add(followee.userId());
+					.computeIfAbsent(follower.userId(), k -> new HashSet<>())
+					.add(followee.userId());
 		}
 
 		public static void unfollow(Map<Integer, Set<Integer>> followers, User follower,
 									User followee
-								   ) {
+		) {
 			followers.computeIfPresent(follower.userId(), (k, v) -> {
 				v.remove(followee.userId());
 				return v;
