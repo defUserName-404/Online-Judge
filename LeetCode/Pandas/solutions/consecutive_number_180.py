@@ -11,7 +11,7 @@ def consecutive_numbers(logs: pd.DataFrame) -> pd.DataFrame:
     i: int = 1
     while i < n:
         count: int = 1
-        while find_val_at_idx(i) == find_val_at_idx(i - 1):
+        while i < n and find_val_at_idx(i) == find_val_at_idx(i - 1):
             count += 1
             i += 1
             if count == 3:
