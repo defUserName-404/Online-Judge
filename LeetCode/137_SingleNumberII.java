@@ -1,19 +1,14 @@
-import java.util.Arrays;
-
 class Solution {
 
 	public int singleNumber(int[] nums) {
-		long sum = Arrays
-			.stream(nums)
-			.asLongStream()
-			.sum();
-		for (int num : nums) {
-			if ((sum - num) % 3 == 0) {
-				return num;
-			}
+		int ones = 0, twos = 0;
+
+		for (final int num : nums) {
+			ones = (ones ^ num) & (~twos);
+			twos = (twos ^ num) & (~ones);
 		}
 
-		return nums[0];
+		return ones;
 	}
 
 }
