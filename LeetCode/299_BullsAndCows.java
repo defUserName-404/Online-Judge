@@ -18,28 +18,23 @@ class Solution {
 		int n = secret.length();
 		Map<Character, Integer> secretCount = new HashMap<>();
 		int bulls = 0, cows = 0;
-
 		for (int i = 0; i < n; i++) {
 			char s = secret.charAt(i);
 			char g = guess.charAt(i);
-
 			if (s == g) {
 				bulls++;
 			} else {
 				secretCount.put(s, secretCount.getOrDefault(s, 0) + 1);
 			}
 		}
-
 		for (int i = 0; i < n; i++) {
 			char s = secret.charAt(i);
 			char g = guess.charAt(i);
-
 			if (s != g && secretCount.containsKey(g) && secretCount.get(g) > 0) {
 				cows++;
 				secretCount.put(g, secretCount.get(g) - 1);
 			}
 		}
-
 		return bulls + "A" + cows + "B";
 	}
 
