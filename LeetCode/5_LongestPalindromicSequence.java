@@ -45,22 +45,19 @@ class Solution {
 	public String longestPalindrome(String s) {
 		int n = s.length();
 		boolean[][] isPalindrome = new boolean[n][n];
-
 		int maxLength = 1;
 		int start = 0;
-
 		for (int len = 1; len <= n; len++) {
 			for (int i = 0; i <= n - len; i++) {
 				int j = i + len - 1;
 				isPalindrome[i][j] =
-					s.charAt(i) == s.charAt(j) && (len <= 2 || isPalindrome[i + 1][j - 1]);
+						s.charAt(i) == s.charAt(j) && (len <= 2 || isPalindrome[i + 1][j - 1]);
 				if (isPalindrome[i][j] && len > maxLength) {
 					maxLength = len;
 					start = i;
 				}
 			}
 		}
-
 		return s.substring(start, start + maxLength);
 	}
 

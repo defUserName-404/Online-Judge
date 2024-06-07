@@ -17,20 +17,16 @@ class Solution {
 			if (maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {
 				if ((n1 + n2) % 2 == 0) {
 					return (double) (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2))
-						   / 2;
-				}
-				else {
+							/ 2;
+				} else {
 					return (double) Math.max(maxLeft1, maxLeft2);
 				}
-			}
-			else if (maxLeft1 > minRight2) {
+			} else if (maxLeft1 > minRight2) {
 				high = partition1 - 1;
-			}
-			else {
+			} else {
 				low = partition1 + 1;
 			}
 		}
-
 		return 0;
 	}
 
