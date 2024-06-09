@@ -4,7 +4,7 @@ import java.util.Map;
 class Solution {
 
 	public int romanToInt(String givenValue) {
-		Map<Character, Integer> roman = new HashMap<Character, Integer>() {
+		Map<Character, Integer> roman = new HashMap<>() {
 			{
 				put('I', 1);
 				put('V', 5);
@@ -15,19 +15,15 @@ class Solution {
 				put('M', 1000);
 			}
 		};
-
 		int ans = 0;
-
 		for (int i = 0; i < givenValue.length(); i++) {
 			if (i < givenValue.length() - 1 && roman.get(givenValue.charAt(i)) < roman.get(
-				givenValue.charAt(i + 1))) {
+					givenValue.charAt(i + 1))) {
 				ans -= roman.get(givenValue.charAt(i));
-			}
-			else {
+			} else {
 				ans += roman.get(givenValue.charAt(i));
 			}
 		}
-
 		return ans;
 	}
 
