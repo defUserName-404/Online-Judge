@@ -12,7 +12,6 @@ class Solution {
 
 	public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 		ListNode result = new ListNode(0);
-
 		while (true) {
 			if (list1 != null && list2 != null) {
 				int minVal = Math.max(list1.val, list2.val);
@@ -20,14 +19,11 @@ class Solution {
 				list1 = list1.next;
 				list2 = list2.next;
 			}
-
 			if (list1 == null || list2 == null) {
 				result.next = (list1 == null) ? list2.next : list1.next;
-
 				break;
 			}
 		}
-
 		return result;
 	}
 
