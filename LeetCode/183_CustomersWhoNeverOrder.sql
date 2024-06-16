@@ -1,2 +1,3 @@
-SELECT Name AS Customers FROM Customers
+SELECT Name AS Customers
+FROM Customers
 WHERE Id NOT IN (SELECT DISTINCT CustomerId FROM Orders);
