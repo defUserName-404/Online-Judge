@@ -4,7 +4,6 @@ class Solution {
 		int globalMin = Integer.MAX_VALUE;
 		int left = 0;
 		int sum = 0;
-
 		for (int right = 0; right < nums.length; right++) {
 			sum += nums[right];
 			while (sum >= target) {
@@ -12,11 +11,9 @@ class Solution {
 				sum -= nums[left++];
 			}
 		}
-
 		if (globalMin == Integer.MAX_VALUE) {
 			globalMin = 0;
 		}
-
 		return globalMin;
 	}
 
