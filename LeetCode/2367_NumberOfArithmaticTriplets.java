@@ -14,5 +14,5 @@ class Solution {
 													  .allMatch(numsSet::contains))
 							  .count();
 	}
-
+]
 }
