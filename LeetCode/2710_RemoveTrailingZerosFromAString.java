@@ -3,7 +3,6 @@ class Solution {
 	/*
 	 * Solution 1: Iterate through the string and remove trailing zeros
 	 */
-
 //	public String removeTrailingZeros(String num) {
 //		int i = num.length() - 1;
 //		while (i >= 0 && num.charAt(i) == '0') {
