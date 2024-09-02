@@ -2,7 +2,7 @@ import 'dart:math';
 
 class Solution {
   late Random _random;
-  Map<int, List<int>> _map = Map();
+  Map<int, List<int>> _map = {};
 
   Solution(List<int> nums) {
     this._random = Random();
@@ -16,7 +16,8 @@ class Solution {
   }
 
   int pick(int target) {
-    return _map[target]![_random.nextInt(_map[target]!.length)];
+    List<int> indices = _map[target]!;
+    return indices[_random.nextInt(indices.length)];
   }
 }
 
