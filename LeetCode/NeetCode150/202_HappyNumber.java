@@ -6,7 +6,7 @@ class Solution {
         Set<Integer> visited = new HashSet<>();
         while (!visited.contains(n)) {
             visited.add(n);
-            n = getSquareSum(n);
+            n = getDigitSquaredSum(n);
             if (n == 1) {
                 return true;
             }
@@ -14,7 +14,7 @@ class Solution {
         return false;
     }
 
-    private int getSquareSum(int n) {
+    private int getDigitSquaredSum(int n) {
         int squaredSum = 0;
         while (n > 0) {
             int currentDigit = n % 10;
