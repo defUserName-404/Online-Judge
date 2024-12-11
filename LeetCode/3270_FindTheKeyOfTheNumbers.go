@@ -17,7 +17,6 @@ func generateKey(num1 int, num2 int, num3 int) int {
 		minDigit := min(min(d1, d2), d3)
 		result += fmt.Sprintf("%d", minDigit)
 	}
-
 	resInt, _ := strconv.Atoi(result)
 	return resInt
 }
