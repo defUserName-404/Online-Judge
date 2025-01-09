@@ -8,19 +8,9 @@ import java.util.stream.Collectors;
 class Solution {
 
 	public String frequencySort(String s) {
-		Map<Character, Integer> occurranceMapUnsorted = new HashMap<>();
+        Solution.countCharacterOccurrance(s);
 
-		for (final char ch : s.toCharArray()) {
-			if (occurranceMapUnsorted.containsKey(ch)) {
-				occurranceMapUnsorted.put(ch, occurranceMapUnsorted.get(ch) + 1);
-			}
-			else {
-				occurranceMapUnsorted.put(ch, 1);
-			}
-
-		}
-
-		Map<Character, Integer> occurranceMapSorted = occurranceMapUnsorted
+        Map<Character, Integer> occurranceMapSorted = occurranceMapUnsorted
 			.entrySet()
 			.stream()
 			.sorted(Entry.comparingByValue(Comparator.reverseOrder()))
