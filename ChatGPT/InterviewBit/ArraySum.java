@@ -1,29 +1,22 @@
-import java.util.Arrays;
-import java.util.Stack;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 class Solution {
-    public static int[] addArrays(int[] a, int[] b) {
-        int sum1 = 0, sum2 = 0;
-        for (int i : a) {
-            sum1 = sum1 * 10 + i;
+    public ArrayList<Integer> addArrays(ArrayList<Integer> a, ArrayList<Integer> b) {
+        int m = a.size(), n = b.size();
+        int maxSize = Math.max(m, n);
+        LinkedList<Integer> result = new LinkedList<>();
+        int carry = 0;
+        for (int i = 0; i < maxSize; i++) {
+            int sum = carry;
+            if (m > 0) sum += a.get(--m);
+            if (n > 0) sum += b.get(--n);
+            carry = sum / 10;
+            result.addFirst(sum % 10);
         }
-        for (int i : b) {
-            sum2 = sum2 * 10 + i;
+        if (carry != 0) {
+            result.addFirst(carry);
         }
-        System.out.println(sum1);
-        System.out.println(sum2);
-        long finalSum = sum1 + sum2;
-        int length = String.valueOf(finalSum).length();
-        System.out.println(finalSum);
-        Stack<Integer> result = new Stack<>();
-        for (int i = length - 1; i >= 0; i--) {
-            result.add((int) (finalSum % 10));
-            finalSum /= 10;
-        }
-        return result.stream().mapToInt(Integer::intValue).toArray();
-    }
-
-    public static void main(String[] args) {
-        System.out.println("result" + Arrays.toString(addArrays(new int[]{4, 3, 6, 7, 9, 9, 1, 7, 8}, new int[]{7, 5, 8, 9})));
+        return new ArrayList<>(result);
     }
 }
