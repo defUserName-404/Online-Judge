@@ -31,4 +31,3 @@ FROM Students AS students
                        AND subjects.subject_name = exams.subject_name
 GROUP BY students.student_id, students.student_name, subjects.subject_name
 ORDER BY students.student_id, subjects.subject_name;
-
