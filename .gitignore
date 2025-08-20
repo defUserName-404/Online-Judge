@@ -5,3 +5,5 @@
 **/.idea/**
 **/LeetCode.iml
 **/*.iml
+
+**/node_modules
