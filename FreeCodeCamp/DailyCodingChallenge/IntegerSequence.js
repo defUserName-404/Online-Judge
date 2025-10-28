@@ -1,8 +1,7 @@
 //! 2025-10-27
 function sequence(n) {
-    let result = "";
-    for (let i = 1; i <= parseInt(n); i++) {
-        result += i.toString();
+    if (n === 1) {
+        return "1";
     }
-    return result;
+    return sequence(n - 1) + n.toString();
 }
