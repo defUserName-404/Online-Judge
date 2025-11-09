@@ -1,3 +1,5 @@
+# ! 2025-11-09
+
 def can_post(message):
     length = len(message)
     if length <= 40:
