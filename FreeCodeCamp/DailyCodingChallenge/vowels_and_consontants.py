@@ -5,10 +5,7 @@
 # ? Ignore any non-letter characters.
 # ? For example, given "Hello World", return [3, 7].
 
-from typing import List
-
-
-def count_vowels_and_consonants(s: str) -> List[int]:
+def count(s: str) -> list[int]:
     letters = list(filter(str.isalpha, s.lower()))
     vowels = len(list(filter(lambda x: x in 'aeiou', letters)))
     consonants = len(letters) - vowels
