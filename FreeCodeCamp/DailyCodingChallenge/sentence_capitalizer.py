@@ -12,6 +12,10 @@ def capitalize(paragraph: str) -> str:
 
     # Find all sentence starts (start of string or after sentence-ending punctuation)
     # and capitalize the first letter after each match
+    # (^|\s*[.!?]+\s*) - Matches either:
+    # The start of the string ^
+    # OR any number of spaces \s*, followed by one or more sentence-ending punctuation marks [.!?]+, followed by any number of spaces \s*
+    # ([a-z]) - Captures the first lowercase letter after the match
     return re.sub(
         r'(^|\s*[.!?]+\s*)([a-z])',
         lambda m: m.group(1) + m.group(2).upper(),
