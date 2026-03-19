@@ -4,12 +4,12 @@ type Func = (...params: number[]) => number
 function memoize(fn: Func): Func {
     const cache = new Map<string, number>();
     return function(...args) {
-        const key = args.join(',');
+        const key = args.toString();
         if (cache.has(key)) {
             return cache.get(key)!;
         } else {
             const result = fn(...args);
-            cache.set(key, result);
+            cache.set(key,  result);
             return result;
         }
     }
