@@ -2,24 +2,24 @@ type Func = (...params: number[]) => number
 
 
 function memoize(fn: Func): Func {
-    const cache = new Map<string, number>();
-    return function(...args) {
-        const key = args.toString();
-        if (cache.has(key)) {
-            return cache.get(key)!;
-        } else {
-            const result = fn(...args);
-            cache.set(key,  result);
-            return result;
-        }
+  const cache = new Map<string, number>();
+  return function (...args) {
+    const key = args.toString();
+    if (cache.has(key)) {
+      return cache.get(key)!;
+    } else {
+      const result = fn(...args);
+      cache.set(key, result);
+      return result;
     }
+  }
 }
 
 
 /**
  * let callCount = 0;
  * const memoizedFn = memoize(function (a, b) {
- *	 callCount += 1;
+ *   callCount += 1;
  *   return a + b;
  * })
  * memoizedFn(2, 3) // 5
