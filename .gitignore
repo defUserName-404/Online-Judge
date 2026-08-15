@@ -5,6 +5,8 @@
 **/.idea/**
 **/LeetCode.iml
 **/*.iml
+.DS_Store
+
 
 **/node_modules
 tsconfig.json
