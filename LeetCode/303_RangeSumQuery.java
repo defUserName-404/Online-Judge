@@ -1,4 +1,4 @@
-class NumArray {
+class NumArray<T> {
 
 	private final int[] prefixSum;
 
